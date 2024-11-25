@@ -1,0 +1,31 @@
+[
+  {
+    "path": "/s",
+    "permission": "none"
+  },
+  {
+    "path": "/jwttest",
+    "permission": "none"
+  },
+  {
+    "path": "/payment/test",
+    "permission": "none"
+  },
+  {
+    "path": "/payment/create_payment_intent",
+    "permission": "create:payment_intent"
+  },
+  {
+    "path": "/payment/cancel_payment",
+    "permission": "cancel:payment"
+  },
+  { "path": "/payment/confirm_payment", "permission": "confirm:payment" },
+  {
+    "path": "/payment/capture_payment",
+    "permission": "capture:payment"
+  },
+  {
+    "path": "/payment/refund_payment",
+    "permission": "refund:payment"
+  }
+]
