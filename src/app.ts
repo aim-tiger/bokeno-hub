@@ -1,1 +1,2 @@
-console.log("Hello via Nanisore!");
+import { randomUUID } from 'crypto';
+console.log("Hello via Nanisore!", randomUUID());

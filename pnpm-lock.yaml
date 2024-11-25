@@ -8,6 +8,24 @@ importers:
 
   .:
     dependencies:
+      '@elysiajs/bearer':
+        specifier: ^1.1.2
+        version: 1.1.2(elysia@1.1.25(@sinclair/typebox@0.34.8)(typescript@5.7.2))
+      '@elysiajs/cors':
+        specifier: ^1.1.1
+        version: 1.1.1(elysia@1.1.25(@sinclair/typebox@0.34.8)(typescript@5.7.2))
+      '@elysiajs/static':
+        specifier: ^1.1.1
+        version: 1.1.1(elysia@1.1.25(@sinclair/typebox@0.34.8)(typescript@5.7.2))
+      '@graphql-codegen/typescript-graphql-request':
+        specifier: ^6.2.0
+        version: 6.2.0(graphql-request@7.1.2(graphql@16.9.0))(graphql-tag@2.12.6(graphql@16.9.0))(graphql@16.9.0)
+      elysia:
+        specifier: ^1.1.12
+        version: 1.1.25(@sinclair/typebox@0.34.8)(typescript@5.7.2)
+      graphql-request:
+        specifier: ^7.1.0
+        version: 7.1.2(graphql@16.9.0)
       typescript:
         specifier: ^5.0.0
         version: 5.7.2
@@ -315,6 +333,21 @@ packages:
     resolution: {integrity: sha512-Z/yiTPj+lDVnF7lWeKCIJzaIkI0vYO87dMpZ4bg4TDrFe4XXLFWL1TbXU27gBP3QccxV9mZICCrnjnYlJjXHOA==}
     engines: {node: '>=6.9.0'}
 
+  '@elysiajs/bearer@1.1.2':
+    resolution: {integrity: sha512-xlClHLMxuNm4IF0dRsVtTyJm7X9MhTBn6SxrsqLWwT+9pO57+RDW2HblnLvnYupMnVW424iQ8ky1CgGwIqP6Nw==}
+    peerDependencies:
+      elysia: '>= 1.1.0'
+
+  '@elysiajs/cors@1.1.1':
+    resolution: {integrity: sha512-Bl6JSURwbneaJqkq02bd0C/F8StkmU5zoPLpnSncy4DZSU8TDwWPXxmoHqozI3hf1piDaSQ+I21cmpjPlQ8uYQ==}
+    peerDependencies:
+      elysia: '>= 1.1.0'
+
+  '@elysiajs/static@1.1.1':
+    resolution: {integrity: sha512-H1KqsuNHhHKYKUkPoies0pPQBgbA4qsfre840FKraeF99jz++2P/igrOagp8cWqwFGrHP1V+nwGlGm9U6rZAEg==}
+    peerDependencies:
+      elysia: '>= 1.1.0'
+
   '@graphql-codegen/add@5.0.3':
     resolution: {integrity: sha512-SxXPmramkth8XtBlAHu4H4jYcYXM/o3p01+psU+0NADQowA8jtYkK6MW5rV6T+CxkEaNZItfSmZRPgIuypcqnA==}
     peerDependencies:
@@ -379,6 +412,14 @@ packages:
     engines: {node: '>=16'}
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+
+  '@graphql-codegen/typescript-graphql-request@6.2.0':
+    resolution: {integrity: sha512-nkp5tr4PrC/+2QkQqi+IB+bc7AavUnUvXPW8MC93HZRvwfMGy6m2Oo7b9JCPZ3vhNpqT2VDWOn/zIZXKz6zJAw==}
+    engines: {node: '>= 16.0.0'}
+    peerDependencies:
+      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+      graphql-request: ^6.0.0
+      graphql-tag: ^2.0.0
 
   '@graphql-codegen/typescript-operations@4.4.0':
     resolution: {integrity: sha512-oVlos2ySx8xIbbe8r5ZI6mOpI+OTeP14RmS2MchBJ6DL+S9G16O6+9V3Y8V22fTnmBTZkTfAAaBv4HYhhDGWVA==}
@@ -614,6 +655,9 @@ packages:
   '@repeaterjs/repeater@3.0.6':
     resolution: {integrity: sha512-Javneu5lsuhwNCryN+pXH93VPQ8g0dBX7wItHFgYiwQmzE1sVdg5tWHiOgHywzL2W21XQopa7IwIEnNbmeUJYA==}
 
+  '@sinclair/typebox@0.34.8':
+    resolution: {integrity: sha512-PuVkV/MmJOsjem7FIlmuPhd2Owvq4v+ZVvN6wxWuT1NduGDzz2jlc4xIvPQSUE0yS13BRaYOVNq9rnIOkucGVA==}
+
   '@types/bun@1.1.13':
     resolution: {integrity: sha512-KmQxSBgVWCl6RSuerlLGZlIWfdxkKqat0nxN61+qu4y1KDn0Ll3j7v1Pl8GnaL3a/U6GGWVTJh75ap62kR1E8Q==}
 
@@ -789,6 +833,10 @@ packages:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
 
+  clone@2.1.2:
+    resolution: {integrity: sha512-3Pe/CF1Nn94hyhIYpjtiLhdCoEoz0DqQ+988E9gmeEdQZlojxnOb74wctFyuwWQHzqyf9X7C7MG8juUpqBJT8w==}
+    engines: {node: '>=0.8'}
+
   color-convert@2.0.1:
     resolution: {integrity: sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==}
     engines: {node: '>=7.0.0'}
@@ -811,6 +859,10 @@ packages:
 
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
+
+  cookie@1.0.2:
+    resolution: {integrity: sha512-9Kr/j4O16ISv8zBBhJoi4bXOYNTkFLOqSL3UDB0njXxCXNezjeyVrJyGOWtgfs/q2km1gwBcfH8q1yEGoMYunA==}
+    engines: {node: '>=18'}
 
   cosmiconfig@8.3.6:
     resolution: {integrity: sha512-kcZ6+W5QzcJ3P1Mt+83OUv/oHFqZHIx8DuxG6eZ5RGMERoLqp4BuGjhHLYGK+Kf5XVkQvqBSmAy/nGWN3qDgEA==}
@@ -875,6 +927,18 @@ packages:
 
   electron-to-chromium@1.5.64:
     resolution: {integrity: sha512-IXEuxU+5ClW2IGEYFC2T7szbyVgehupCWQe5GNh+H065CD6U6IFN0s4KeAMFGNmQolRU4IV7zGBWSYMmZ8uuqQ==}
+
+  elysia@1.1.25:
+    resolution: {integrity: sha512-lBLUnhfD86q/0a5sNzWTiNuPsrW7ykGz8HoebybVfK+P1hjVwzzPkM/NtNnwPx7wrpd+D7UP7EyqeFPD4CPaQA==}
+    peerDependencies:
+      '@sinclair/typebox': '>= 0.32.0'
+      openapi-types: '>= 12.0.0'
+      typescript: '>= 5.0.0'
+    peerDependenciesMeta:
+      openapi-types:
+        optional: true
+      typescript:
+        optional: true
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -971,6 +1035,11 @@ packages:
 
   graphql-request@6.1.0:
     resolution: {integrity: sha512-p+XPfS4q7aIpKVcgmnZKhMNqhltk20hfXtkaIkTfjjmiKMJ5xrt5c743cL03y/K7y1rg3WrIC49xGiEQ4mxdNw==}
+    peerDependencies:
+      graphql: 14 - 16
+
+  graphql-request@7.1.2:
+    resolution: {integrity: sha512-+XE3iuC55C2di5ZUrB4pjgwe+nIQBuXVIK9J98wrVwojzDW3GMdSBZfxUk8l4j9TieIpjpggclxhNEU9ebGF8w==}
     peerDependencies:
       graphql: 14 - 16
 
@@ -1218,6 +1287,10 @@ packages:
 
   no-case@3.0.4:
     resolution: {integrity: sha512-fgAN3jGAh+RoxUGZHTSOLJIqUc2wmoBwGR4tbpNAKmmovFoWq0OdRkb0VkldReO2a2iBT/OEulG9XSUc10r3zg==}
+
+  node-cache@5.1.2:
+    resolution: {integrity: sha512-t1QzWwnk4sjLWaQAS8CHgOJ+RAfmHpxFWmc36IWTiWHQfs0w5JDMBS1b1ZxQteo0vVVuWJvIUKHDkkeK7vIGCg==}
+    engines: {node: '>= 8.0.0'}
 
   node-fetch@2.7.0:
     resolution: {integrity: sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==}
@@ -1977,6 +2050,19 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
+  '@elysiajs/bearer@1.1.2(elysia@1.1.25(@sinclair/typebox@0.34.8)(typescript@5.7.2))':
+    dependencies:
+      elysia: 1.1.25(@sinclair/typebox@0.34.8)(typescript@5.7.2)
+
+  '@elysiajs/cors@1.1.1(elysia@1.1.25(@sinclair/typebox@0.34.8)(typescript@5.7.2))':
+    dependencies:
+      elysia: 1.1.25(@sinclair/typebox@0.34.8)(typescript@5.7.2)
+
+  '@elysiajs/static@1.1.1(elysia@1.1.25(@sinclair/typebox@0.34.8)(typescript@5.7.2))':
+    dependencies:
+      elysia: 1.1.25(@sinclair/typebox@0.34.8)(typescript@5.7.2)
+      node-cache: 5.1.2
+
   '@graphql-codegen/add@5.0.3(graphql@16.9.0)':
     dependencies:
       '@graphql-codegen/plugin-helpers': 5.1.0(graphql@16.9.0)
@@ -2125,6 +2211,19 @@ snapshots:
       auto-bind: 4.0.0
       change-case-all: 1.0.15
       graphql: 16.9.0
+      tslib: 2.6.3
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+
+  '@graphql-codegen/typescript-graphql-request@6.2.0(graphql-request@7.1.2(graphql@16.9.0))(graphql-tag@2.12.6(graphql@16.9.0))(graphql@16.9.0)':
+    dependencies:
+      '@graphql-codegen/plugin-helpers': 3.1.2(graphql@16.9.0)
+      '@graphql-codegen/visitor-plugin-common': 2.13.1(graphql@16.9.0)
+      auto-bind: 4.0.0
+      graphql: 16.9.0
+      graphql-request: 7.1.2(graphql@16.9.0)
+      graphql-tag: 2.12.6(graphql@16.9.0)
       tslib: 2.6.3
     transitivePeerDependencies:
       - encoding
@@ -2522,6 +2621,8 @@ snapshots:
 
   '@repeaterjs/repeater@3.0.6': {}
 
+  '@sinclair/typebox@0.34.8': {}
+
   '@types/bun@1.1.13':
     dependencies:
       bun-types: 1.1.34
@@ -2768,6 +2869,8 @@ snapshots:
 
   clone@1.0.4: {}
 
+  clone@2.1.2: {}
+
   color-convert@2.0.1:
     dependencies:
       color-name: 1.1.4
@@ -2787,6 +2890,8 @@ snapshots:
       upper-case: 2.0.2
 
   convert-source-map@2.0.0: {}
+
+  cookie@1.0.2: {}
 
   cosmiconfig@8.3.6(typescript@5.7.2):
     dependencies:
@@ -2839,6 +2944,14 @@ snapshots:
   dset@3.1.4: {}
 
   electron-to-chromium@1.5.64: {}
+
+  elysia@1.1.25(@sinclair/typebox@0.34.8)(typescript@5.7.2):
+    dependencies:
+      '@sinclair/typebox': 0.34.8
+      cookie: 1.0.2
+      fast-decode-uri-component: 1.0.1
+    optionalDependencies:
+      typescript: 5.7.2
 
   emoji-regex@8.0.0: {}
 
@@ -2965,6 +3078,11 @@ snapshots:
       graphql: 16.9.0
     transitivePeerDependencies:
       - encoding
+
+  graphql-request@7.1.2(graphql@16.9.0):
+    dependencies:
+      '@graphql-typed-document-node/core': 3.2.0(graphql@16.9.0)
+      graphql: 16.9.0
 
   graphql-tag@2.12.6(graphql@16.9.0):
     dependencies:
@@ -3192,6 +3310,10 @@ snapshots:
     dependencies:
       lower-case: 2.0.2
       tslib: 2.8.1
+
+  node-cache@5.1.2:
+    dependencies:
+      clone: 2.1.2
 
   node-fetch@2.7.0:
     dependencies:
