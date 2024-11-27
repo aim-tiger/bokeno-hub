@@ -29,4 +29,4 @@ COPY . .
 EXPOSE 3001
 
 # Command to run the app
-CMD ["bun", "run", "src/main.ts"]
+CMD ["bun", "run", "src/app.ts"]
