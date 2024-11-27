@@ -247,14 +247,26 @@ export type Mutation_Root = {
   delete_nanisore_user?: Maybe<Nanisore_User_Mutation_Response>;
   /** delete single row from the table: "nanisore.user" */
   delete_nanisore_user_by_pk?: Maybe<Nanisore_User>;
+  /** delete data from the table: "scraper.child" */
+  delete_scraper_child?: Maybe<Scraper_Child_Mutation_Response>;
+  /** delete single row from the table: "scraper.child" */
+  delete_scraper_child_by_pk?: Maybe<Scraper_Child>;
   /** delete data from the table: "scraper.item" */
   delete_scraper_item?: Maybe<Scraper_Item_Mutation_Response>;
   /** delete single row from the table: "scraper.item" */
   delete_scraper_item_by_pk?: Maybe<Scraper_Item>;
+  /** delete data from the table: "scraper.parent" */
+  delete_scraper_parent?: Maybe<Scraper_Parent_Mutation_Response>;
+  /** delete single row from the table: "scraper.parent" */
+  delete_scraper_parent_by_pk?: Maybe<Scraper_Parent>;
   /** delete data from the table: "scraper.run" */
   delete_scraper_run?: Maybe<Scraper_Run_Mutation_Response>;
   /** delete single row from the table: "scraper.run" */
   delete_scraper_run_by_pk?: Maybe<Scraper_Run>;
+  /** delete data from the table: "scraper.run_v2" */
+  delete_scraper_run_v2?: Maybe<Scraper_Run_V2_Mutation_Response>;
+  /** delete single row from the table: "scraper.run_v2" */
+  delete_scraper_run_v2_by_pk?: Maybe<Scraper_Run_V2>;
   /** delete data from the table: "scraper.scrape_later" */
   delete_scraper_scrape_later?: Maybe<Scraper_Scrape_Later_Mutation_Response>;
   /** delete single row from the table: "scraper.scrape_later" */
@@ -343,14 +355,26 @@ export type Mutation_Root = {
   insert_nanisore_user?: Maybe<Nanisore_User_Mutation_Response>;
   /** insert a single row into the table: "nanisore.user" */
   insert_nanisore_user_one?: Maybe<Nanisore_User>;
+  /** insert data into the table: "scraper.child" */
+  insert_scraper_child?: Maybe<Scraper_Child_Mutation_Response>;
+  /** insert a single row into the table: "scraper.child" */
+  insert_scraper_child_one?: Maybe<Scraper_Child>;
   /** insert data into the table: "scraper.item" */
   insert_scraper_item?: Maybe<Scraper_Item_Mutation_Response>;
   /** insert a single row into the table: "scraper.item" */
   insert_scraper_item_one?: Maybe<Scraper_Item>;
+  /** insert data into the table: "scraper.parent" */
+  insert_scraper_parent?: Maybe<Scraper_Parent_Mutation_Response>;
+  /** insert a single row into the table: "scraper.parent" */
+  insert_scraper_parent_one?: Maybe<Scraper_Parent>;
   /** insert data into the table: "scraper.run" */
   insert_scraper_run?: Maybe<Scraper_Run_Mutation_Response>;
   /** insert a single row into the table: "scraper.run" */
   insert_scraper_run_one?: Maybe<Scraper_Run>;
+  /** insert data into the table: "scraper.run_v2" */
+  insert_scraper_run_v2?: Maybe<Scraper_Run_V2_Mutation_Response>;
+  /** insert a single row into the table: "scraper.run_v2" */
+  insert_scraper_run_v2_one?: Maybe<Scraper_Run_V2>;
   /** insert data into the table: "scraper.scrape_later" */
   insert_scraper_scrape_later?: Maybe<Scraper_Scrape_Later_Mutation_Response>;
   /** insert a single row into the table: "scraper.scrape_later" */
@@ -481,18 +505,36 @@ export type Mutation_Root = {
   update_nanisore_user_by_pk?: Maybe<Nanisore_User>;
   /** update multiples rows of table: "nanisore.user" */
   update_nanisore_user_many?: Maybe<Array<Maybe<Nanisore_User_Mutation_Response>>>;
+  /** update data of the table: "scraper.child" */
+  update_scraper_child?: Maybe<Scraper_Child_Mutation_Response>;
+  /** update single row of the table: "scraper.child" */
+  update_scraper_child_by_pk?: Maybe<Scraper_Child>;
+  /** update multiples rows of table: "scraper.child" */
+  update_scraper_child_many?: Maybe<Array<Maybe<Scraper_Child_Mutation_Response>>>;
   /** update data of the table: "scraper.item" */
   update_scraper_item?: Maybe<Scraper_Item_Mutation_Response>;
   /** update single row of the table: "scraper.item" */
   update_scraper_item_by_pk?: Maybe<Scraper_Item>;
   /** update multiples rows of table: "scraper.item" */
   update_scraper_item_many?: Maybe<Array<Maybe<Scraper_Item_Mutation_Response>>>;
+  /** update data of the table: "scraper.parent" */
+  update_scraper_parent?: Maybe<Scraper_Parent_Mutation_Response>;
+  /** update single row of the table: "scraper.parent" */
+  update_scraper_parent_by_pk?: Maybe<Scraper_Parent>;
+  /** update multiples rows of table: "scraper.parent" */
+  update_scraper_parent_many?: Maybe<Array<Maybe<Scraper_Parent_Mutation_Response>>>;
   /** update data of the table: "scraper.run" */
   update_scraper_run?: Maybe<Scraper_Run_Mutation_Response>;
   /** update single row of the table: "scraper.run" */
   update_scraper_run_by_pk?: Maybe<Scraper_Run>;
   /** update multiples rows of table: "scraper.run" */
   update_scraper_run_many?: Maybe<Array<Maybe<Scraper_Run_Mutation_Response>>>;
+  /** update data of the table: "scraper.run_v2" */
+  update_scraper_run_v2?: Maybe<Scraper_Run_V2_Mutation_Response>;
+  /** update single row of the table: "scraper.run_v2" */
+  update_scraper_run_v2_by_pk?: Maybe<Scraper_Run_V2>;
+  /** update multiples rows of table: "scraper.run_v2" */
+  update_scraper_run_v2_many?: Maybe<Array<Maybe<Scraper_Run_V2_Mutation_Response>>>;
   /** update data of the table: "scraper.scrape_later" */
   update_scraper_scrape_later?: Maybe<Scraper_Scrape_Later_Mutation_Response>;
   /** update single row of the table: "scraper.scrape_later" */
@@ -755,6 +797,18 @@ export type Mutation_RootDelete_Nanisore_User_By_PkArgs = {
 
 
 /** mutation root */
+export type Mutation_RootDelete_Scraper_ChildArgs = {
+  where: Scraper_Child_Bool_Exp;
+};
+
+
+/** mutation root */
+export type Mutation_RootDelete_Scraper_Child_By_PkArgs = {
+  id: Scalars['bigint']['input'];
+};
+
+
+/** mutation root */
 export type Mutation_RootDelete_Scraper_ItemArgs = {
   where: Scraper_Item_Bool_Exp;
 };
@@ -767,6 +821,18 @@ export type Mutation_RootDelete_Scraper_Item_By_PkArgs = {
 
 
 /** mutation root */
+export type Mutation_RootDelete_Scraper_ParentArgs = {
+  where: Scraper_Parent_Bool_Exp;
+};
+
+
+/** mutation root */
+export type Mutation_RootDelete_Scraper_Parent_By_PkArgs = {
+  id: Scalars['bigint']['input'];
+};
+
+
+/** mutation root */
 export type Mutation_RootDelete_Scraper_RunArgs = {
   where: Scraper_Run_Bool_Exp;
 };
@@ -774,6 +840,18 @@ export type Mutation_RootDelete_Scraper_RunArgs = {
 
 /** mutation root */
 export type Mutation_RootDelete_Scraper_Run_By_PkArgs = {
+  id: Scalars['Int']['input'];
+};
+
+
+/** mutation root */
+export type Mutation_RootDelete_Scraper_Run_V2Args = {
+  where: Scraper_Run_V2_Bool_Exp;
+};
+
+
+/** mutation root */
+export type Mutation_RootDelete_Scraper_Run_V2_By_PkArgs = {
   id: Scalars['Int']['input'];
 };
 
@@ -1085,6 +1163,20 @@ export type Mutation_RootInsert_Nanisore_User_OneArgs = {
 
 
 /** mutation root */
+export type Mutation_RootInsert_Scraper_ChildArgs = {
+  objects: Array<Scraper_Child_Insert_Input>;
+  on_conflict?: InputMaybe<Scraper_Child_On_Conflict>;
+};
+
+
+/** mutation root */
+export type Mutation_RootInsert_Scraper_Child_OneArgs = {
+  object: Scraper_Child_Insert_Input;
+  on_conflict?: InputMaybe<Scraper_Child_On_Conflict>;
+};
+
+
+/** mutation root */
 export type Mutation_RootInsert_Scraper_ItemArgs = {
   objects: Array<Scraper_Item_Insert_Input>;
   on_conflict?: InputMaybe<Scraper_Item_On_Conflict>;
@@ -1099,6 +1191,20 @@ export type Mutation_RootInsert_Scraper_Item_OneArgs = {
 
 
 /** mutation root */
+export type Mutation_RootInsert_Scraper_ParentArgs = {
+  objects: Array<Scraper_Parent_Insert_Input>;
+  on_conflict?: InputMaybe<Scraper_Parent_On_Conflict>;
+};
+
+
+/** mutation root */
+export type Mutation_RootInsert_Scraper_Parent_OneArgs = {
+  object: Scraper_Parent_Insert_Input;
+  on_conflict?: InputMaybe<Scraper_Parent_On_Conflict>;
+};
+
+
+/** mutation root */
 export type Mutation_RootInsert_Scraper_RunArgs = {
   objects: Array<Scraper_Run_Insert_Input>;
   on_conflict?: InputMaybe<Scraper_Run_On_Conflict>;
@@ -1109,6 +1215,20 @@ export type Mutation_RootInsert_Scraper_RunArgs = {
 export type Mutation_RootInsert_Scraper_Run_OneArgs = {
   object: Scraper_Run_Insert_Input;
   on_conflict?: InputMaybe<Scraper_Run_On_Conflict>;
+};
+
+
+/** mutation root */
+export type Mutation_RootInsert_Scraper_Run_V2Args = {
+  objects: Array<Scraper_Run_V2_Insert_Input>;
+  on_conflict?: InputMaybe<Scraper_Run_V2_On_Conflict>;
+};
+
+
+/** mutation root */
+export type Mutation_RootInsert_Scraper_Run_V2_OneArgs = {
+  object: Scraper_Run_V2_Insert_Input;
+  on_conflict?: InputMaybe<Scraper_Run_V2_On_Conflict>;
 };
 
 
@@ -1589,6 +1709,28 @@ export type Mutation_RootUpdate_Nanisore_User_ManyArgs = {
 
 
 /** mutation root */
+export type Mutation_RootUpdate_Scraper_ChildArgs = {
+  _inc?: InputMaybe<Scraper_Child_Inc_Input>;
+  _set?: InputMaybe<Scraper_Child_Set_Input>;
+  where: Scraper_Child_Bool_Exp;
+};
+
+
+/** mutation root */
+export type Mutation_RootUpdate_Scraper_Child_By_PkArgs = {
+  _inc?: InputMaybe<Scraper_Child_Inc_Input>;
+  _set?: InputMaybe<Scraper_Child_Set_Input>;
+  pk_columns: Scraper_Child_Pk_Columns_Input;
+};
+
+
+/** mutation root */
+export type Mutation_RootUpdate_Scraper_Child_ManyArgs = {
+  updates: Array<Scraper_Child_Updates>;
+};
+
+
+/** mutation root */
 export type Mutation_RootUpdate_Scraper_ItemArgs = {
   _inc?: InputMaybe<Scraper_Item_Inc_Input>;
   _set?: InputMaybe<Scraper_Item_Set_Input>;
@@ -1611,6 +1753,28 @@ export type Mutation_RootUpdate_Scraper_Item_ManyArgs = {
 
 
 /** mutation root */
+export type Mutation_RootUpdate_Scraper_ParentArgs = {
+  _inc?: InputMaybe<Scraper_Parent_Inc_Input>;
+  _set?: InputMaybe<Scraper_Parent_Set_Input>;
+  where: Scraper_Parent_Bool_Exp;
+};
+
+
+/** mutation root */
+export type Mutation_RootUpdate_Scraper_Parent_By_PkArgs = {
+  _inc?: InputMaybe<Scraper_Parent_Inc_Input>;
+  _set?: InputMaybe<Scraper_Parent_Set_Input>;
+  pk_columns: Scraper_Parent_Pk_Columns_Input;
+};
+
+
+/** mutation root */
+export type Mutation_RootUpdate_Scraper_Parent_ManyArgs = {
+  updates: Array<Scraper_Parent_Updates>;
+};
+
+
+/** mutation root */
 export type Mutation_RootUpdate_Scraper_RunArgs = {
   _inc?: InputMaybe<Scraper_Run_Inc_Input>;
   _set?: InputMaybe<Scraper_Run_Set_Input>;
@@ -1629,6 +1793,28 @@ export type Mutation_RootUpdate_Scraper_Run_By_PkArgs = {
 /** mutation root */
 export type Mutation_RootUpdate_Scraper_Run_ManyArgs = {
   updates: Array<Scraper_Run_Updates>;
+};
+
+
+/** mutation root */
+export type Mutation_RootUpdate_Scraper_Run_V2Args = {
+  _inc?: InputMaybe<Scraper_Run_V2_Inc_Input>;
+  _set?: InputMaybe<Scraper_Run_V2_Set_Input>;
+  where: Scraper_Run_V2_Bool_Exp;
+};
+
+
+/** mutation root */
+export type Mutation_RootUpdate_Scraper_Run_V2_By_PkArgs = {
+  _inc?: InputMaybe<Scraper_Run_V2_Inc_Input>;
+  _set?: InputMaybe<Scraper_Run_V2_Set_Input>;
+  pk_columns: Scraper_Run_V2_Pk_Columns_Input;
+};
+
+
+/** mutation root */
+export type Mutation_RootUpdate_Scraper_Run_V2_ManyArgs = {
+  updates: Array<Scraper_Run_V2_Updates>;
 };
 
 
@@ -1767,6 +1953,7 @@ export type Nanisore_Category_Material = {
   original_category_ids?: Maybe<Array<Scalars['Int']['output']>>;
   /** An object relationship */
   product?: Maybe<Nanisore_Product>;
+  product_id?: Maybe<Scalars['bigint']['output']>;
   updated_at: Scalars['timestamptz']['output'];
 };
 
@@ -1804,6 +1991,7 @@ export type Nanisore_Category_Material_Aggregate_FieldsCountArgs = {
 export type Nanisore_Category_Material_Avg_Fields = {
   __typename?: 'nanisore_category_material_avg_fields';
   id?: Maybe<Scalars['Float']['output']>;
+  product_id?: Maybe<Scalars['Float']['output']>;
 };
 
 /** Boolean expression to filter rows from the table "nanisore.category_material". All fields are combined with a logical 'AND'. */
@@ -1816,18 +2004,22 @@ export type Nanisore_Category_Material_Bool_Exp = {
   id?: InputMaybe<Int_Comparison_Exp>;
   original_category_ids?: InputMaybe<Int_Array_Comparison_Exp>;
   product?: InputMaybe<Nanisore_Product_Bool_Exp>;
+  product_id?: InputMaybe<Bigint_Comparison_Exp>;
   updated_at?: InputMaybe<Timestamptz_Comparison_Exp>;
 };
 
 /** unique or primary key constraints on table "nanisore.category_material" */
 export enum Nanisore_Category_Material_Constraint {
   /** unique or primary key constraint on columns "id" */
-  CategoryMaterialPkey = 'category_material_pkey'
+  CategoryMaterialPkey = 'category_material_pkey',
+  /** unique or primary key constraint on columns "product_id" */
+  CategoryMaterialProductIdKey = 'category_material_product_id_key'
 }
 
 /** input type for incrementing numeric columns in table "nanisore.category_material" */
 export type Nanisore_Category_Material_Inc_Input = {
   id?: InputMaybe<Scalars['Int']['input']>;
+  product_id?: InputMaybe<Scalars['bigint']['input']>;
 };
 
 /** input type for inserting data into table "nanisore.category_material" */
@@ -1837,6 +2029,7 @@ export type Nanisore_Category_Material_Insert_Input = {
   id?: InputMaybe<Scalars['Int']['input']>;
   original_category_ids?: InputMaybe<Array<Scalars['Int']['input']>>;
   product?: InputMaybe<Nanisore_Product_Obj_Rel_Insert_Input>;
+  product_id?: InputMaybe<Scalars['bigint']['input']>;
   updated_at?: InputMaybe<Scalars['timestamptz']['input']>;
 };
 
@@ -1847,6 +2040,7 @@ export type Nanisore_Category_Material_Max_Fields = {
   d_category?: Maybe<Scalars['String']['output']>;
   id?: Maybe<Scalars['Int']['output']>;
   original_category_ids?: Maybe<Array<Scalars['Int']['output']>>;
+  product_id?: Maybe<Scalars['bigint']['output']>;
   updated_at?: Maybe<Scalars['timestamptz']['output']>;
 };
 
@@ -1857,6 +2051,7 @@ export type Nanisore_Category_Material_Min_Fields = {
   d_category?: Maybe<Scalars['String']['output']>;
   id?: Maybe<Scalars['Int']['output']>;
   original_category_ids?: Maybe<Array<Scalars['Int']['output']>>;
+  product_id?: Maybe<Scalars['bigint']['output']>;
   updated_at?: Maybe<Scalars['timestamptz']['output']>;
 };
 
@@ -1890,6 +2085,7 @@ export type Nanisore_Category_Material_Order_By = {
   id?: InputMaybe<Order_By>;
   original_category_ids?: InputMaybe<Order_By>;
   product?: InputMaybe<Nanisore_Product_Order_By>;
+  product_id?: InputMaybe<Order_By>;
   updated_at?: InputMaybe<Order_By>;
 };
 
@@ -1909,6 +2105,8 @@ export enum Nanisore_Category_Material_Select_Column {
   /** column name */
   OriginalCategoryIds = 'original_category_ids',
   /** column name */
+  ProductId = 'product_id',
+  /** column name */
   UpdatedAt = 'updated_at'
 }
 
@@ -1918,6 +2116,7 @@ export type Nanisore_Category_Material_Set_Input = {
   d_category?: InputMaybe<Scalars['String']['input']>;
   id?: InputMaybe<Scalars['Int']['input']>;
   original_category_ids?: InputMaybe<Array<Scalars['Int']['input']>>;
+  product_id?: InputMaybe<Scalars['bigint']['input']>;
   updated_at?: InputMaybe<Scalars['timestamptz']['input']>;
 };
 
@@ -1925,18 +2124,21 @@ export type Nanisore_Category_Material_Set_Input = {
 export type Nanisore_Category_Material_Stddev_Fields = {
   __typename?: 'nanisore_category_material_stddev_fields';
   id?: Maybe<Scalars['Float']['output']>;
+  product_id?: Maybe<Scalars['Float']['output']>;
 };
 
 /** aggregate stddev_pop on columns */
 export type Nanisore_Category_Material_Stddev_Pop_Fields = {
   __typename?: 'nanisore_category_material_stddev_pop_fields';
   id?: Maybe<Scalars['Float']['output']>;
+  product_id?: Maybe<Scalars['Float']['output']>;
 };
 
 /** aggregate stddev_samp on columns */
 export type Nanisore_Category_Material_Stddev_Samp_Fields = {
   __typename?: 'nanisore_category_material_stddev_samp_fields';
   id?: Maybe<Scalars['Float']['output']>;
+  product_id?: Maybe<Scalars['Float']['output']>;
 };
 
 /** Streaming cursor of the table "nanisore_category_material" */
@@ -1953,6 +2155,7 @@ export type Nanisore_Category_Material_Stream_Cursor_Value_Input = {
   d_category?: InputMaybe<Scalars['String']['input']>;
   id?: InputMaybe<Scalars['Int']['input']>;
   original_category_ids?: InputMaybe<Array<Scalars['Int']['input']>>;
+  product_id?: InputMaybe<Scalars['bigint']['input']>;
   updated_at?: InputMaybe<Scalars['timestamptz']['input']>;
 };
 
@@ -1960,6 +2163,7 @@ export type Nanisore_Category_Material_Stream_Cursor_Value_Input = {
 export type Nanisore_Category_Material_Sum_Fields = {
   __typename?: 'nanisore_category_material_sum_fields';
   id?: Maybe<Scalars['Int']['output']>;
+  product_id?: Maybe<Scalars['bigint']['output']>;
 };
 
 /** update columns of table "nanisore.category_material" */
@@ -1972,6 +2176,8 @@ export enum Nanisore_Category_Material_Update_Column {
   Id = 'id',
   /** column name */
   OriginalCategoryIds = 'original_category_ids',
+  /** column name */
+  ProductId = 'product_id',
   /** column name */
   UpdatedAt = 'updated_at'
 }
@@ -1989,18 +2195,21 @@ export type Nanisore_Category_Material_Updates = {
 export type Nanisore_Category_Material_Var_Pop_Fields = {
   __typename?: 'nanisore_category_material_var_pop_fields';
   id?: Maybe<Scalars['Float']['output']>;
+  product_id?: Maybe<Scalars['Float']['output']>;
 };
 
 /** aggregate var_samp on columns */
 export type Nanisore_Category_Material_Var_Samp_Fields = {
   __typename?: 'nanisore_category_material_var_samp_fields';
   id?: Maybe<Scalars['Float']['output']>;
+  product_id?: Maybe<Scalars['Float']['output']>;
 };
 
 /** aggregate variance on columns */
 export type Nanisore_Category_Material_Variance_Fields = {
   __typename?: 'nanisore_category_material_variance_fields';
   id?: Maybe<Scalars['Float']['output']>;
+  product_id?: Maybe<Scalars['Float']['output']>;
 };
 
 /** aggregate max on columns */
@@ -2523,7 +2732,9 @@ export type Nanisore_Image = {
   image_type: Scalars['bpchar']['output'];
   operator?: Maybe<Scalars['String']['output']>;
   order: Scalars['smallint']['output'];
-  product_id: Scalars['bigint']['output'];
+  /** An object relationship */
+  product?: Maybe<Nanisore_Product>;
+  product_id?: Maybe<Scalars['bigint']['output']>;
   referer: Scalars['String']['output'];
   updated_at: Scalars['timestamptz']['output'];
   url: Scalars['String']['output'];
@@ -2618,6 +2829,7 @@ export type Nanisore_Image_Bool_Exp = {
   image_type?: InputMaybe<Bpchar_Comparison_Exp>;
   operator?: InputMaybe<String_Comparison_Exp>;
   order?: InputMaybe<Smallint_Comparison_Exp>;
+  product?: InputMaybe<Nanisore_Product_Bool_Exp>;
   product_id?: InputMaybe<Bigint_Comparison_Exp>;
   referer?: InputMaybe<String_Comparison_Exp>;
   updated_at?: InputMaybe<Timestamptz_Comparison_Exp>;
@@ -2627,7 +2839,9 @@ export type Nanisore_Image_Bool_Exp = {
 /** unique or primary key constraints on table "nanisore.image" */
 export enum Nanisore_Image_Constraint {
   /** unique or primary key constraint on columns "id" */
-  ImagePkey = 'image_pkey'
+  ImagePkey = 'image_pkey',
+  /** unique or primary key constraint on columns "product_id", "referer" */
+  ImageProductIdRefererKey = 'image_product_id_referer_key'
 }
 
 /** input type for incrementing numeric columns in table "nanisore.image" */
@@ -2645,6 +2859,7 @@ export type Nanisore_Image_Insert_Input = {
   image_type?: InputMaybe<Scalars['bpchar']['input']>;
   operator?: InputMaybe<Scalars['String']['input']>;
   order?: InputMaybe<Scalars['smallint']['input']>;
+  product?: InputMaybe<Nanisore_Product_Obj_Rel_Insert_Input>;
   product_id?: InputMaybe<Scalars['bigint']['input']>;
   referer?: InputMaybe<Scalars['String']['input']>;
   updated_at?: InputMaybe<Scalars['timestamptz']['input']>;
@@ -2733,6 +2948,7 @@ export type Nanisore_Image_Order_By = {
   image_type?: InputMaybe<Order_By>;
   operator?: InputMaybe<Order_By>;
   order?: InputMaybe<Order_By>;
+  product?: InputMaybe<Nanisore_Product_Order_By>;
   product_id?: InputMaybe<Order_By>;
   referer?: InputMaybe<Order_By>;
   updated_at?: InputMaybe<Order_By>;
@@ -4889,7 +5105,6 @@ export type Nanisore_Product = {
   __typename?: 'nanisore_product';
   /** An object relationship */
   category_material?: Maybe<Nanisore_Category_Material>;
-  category_material_id?: Maybe<Scalars['Int']['output']>;
   cover_image?: Maybe<Scalars['String']['output']>;
   created_at: Scalars['timestamptz']['output'];
   description?: Maybe<Scalars['String']['output']>;
@@ -4909,10 +5124,13 @@ export type Nanisore_Product = {
   platform?: Maybe<Nanisore_Platform>;
   platform_id?: Maybe<Scalars['Int']['output']>;
   price?: Maybe<Scalars['numeric']['output']>;
+  /** From 1 to 100, the smaller the value, the higher the priority */
+  rank: Scalars['Int']['output'];
+  /** Format: actual score/full score */
+  review?: Maybe<Scalars['String']['output']>;
   sku?: Maybe<Scalars['String']['output']>;
   /** An object relationship */
   stock_info?: Maybe<Nanisore_Stock_Info>;
-  stock_info_id?: Maybe<Scalars['Int']['output']>;
   /** An object relationship */
   unity_category?: Maybe<Nanisore_Unity_Category>;
   unity_category_id?: Maybe<Scalars['Int']['output']>;
@@ -5023,25 +5241,25 @@ export type Nanisore_Product_Arr_Rel_Insert_Input = {
 /** aggregate avg on columns */
 export type Nanisore_Product_Avg_Fields = {
   __typename?: 'nanisore_product_avg_fields';
-  category_material_id?: Maybe<Scalars['Float']['output']>;
   group_id?: Maybe<Scalars['Float']['output']>;
   id?: Maybe<Scalars['Float']['output']>;
   original_category_id?: Maybe<Scalars['Float']['output']>;
   platform_id?: Maybe<Scalars['Float']['output']>;
   price?: Maybe<Scalars['Float']['output']>;
-  stock_info_id?: Maybe<Scalars['Float']['output']>;
+  /** From 1 to 100, the smaller the value, the higher the priority */
+  rank?: Maybe<Scalars['Float']['output']>;
   unity_category_id?: Maybe<Scalars['Float']['output']>;
 };
 
 /** order by avg() on columns of table "nanisore.product" */
 export type Nanisore_Product_Avg_Order_By = {
-  category_material_id?: InputMaybe<Order_By>;
   group_id?: InputMaybe<Order_By>;
   id?: InputMaybe<Order_By>;
   original_category_id?: InputMaybe<Order_By>;
   platform_id?: InputMaybe<Order_By>;
   price?: InputMaybe<Order_By>;
-  stock_info_id?: InputMaybe<Order_By>;
+  /** From 1 to 100, the smaller the value, the higher the priority */
+  rank?: InputMaybe<Order_By>;
   unity_category_id?: InputMaybe<Order_By>;
 };
 
@@ -5051,7 +5269,6 @@ export type Nanisore_Product_Bool_Exp = {
   _not?: InputMaybe<Nanisore_Product_Bool_Exp>;
   _or?: InputMaybe<Array<Nanisore_Product_Bool_Exp>>;
   category_material?: InputMaybe<Nanisore_Category_Material_Bool_Exp>;
-  category_material_id?: InputMaybe<Int_Comparison_Exp>;
   cover_image?: InputMaybe<String_Comparison_Exp>;
   created_at?: InputMaybe<Timestamptz_Comparison_Exp>;
   description?: InputMaybe<String_Comparison_Exp>;
@@ -5067,9 +5284,10 @@ export type Nanisore_Product_Bool_Exp = {
   platform?: InputMaybe<Nanisore_Platform_Bool_Exp>;
   platform_id?: InputMaybe<Int_Comparison_Exp>;
   price?: InputMaybe<Numeric_Comparison_Exp>;
+  rank?: InputMaybe<Int_Comparison_Exp>;
+  review?: InputMaybe<String_Comparison_Exp>;
   sku?: InputMaybe<String_Comparison_Exp>;
   stock_info?: InputMaybe<Nanisore_Stock_Info_Bool_Exp>;
-  stock_info_id?: InputMaybe<Int_Comparison_Exp>;
   unity_category?: InputMaybe<Nanisore_Unity_Category_Bool_Exp>;
   unity_category_id?: InputMaybe<Int_Comparison_Exp>;
   updated_at?: InputMaybe<Timestamptz_Comparison_Exp>;
@@ -5089,20 +5307,19 @@ export enum Nanisore_Product_Constraint {
 
 /** input type for incrementing numeric columns in table "nanisore.product" */
 export type Nanisore_Product_Inc_Input = {
-  category_material_id?: InputMaybe<Scalars['Int']['input']>;
   group_id?: InputMaybe<Scalars['bigint']['input']>;
   id?: InputMaybe<Scalars['bigint']['input']>;
   original_category_id?: InputMaybe<Scalars['Int']['input']>;
   platform_id?: InputMaybe<Scalars['Int']['input']>;
   price?: InputMaybe<Scalars['numeric']['input']>;
-  stock_info_id?: InputMaybe<Scalars['Int']['input']>;
+  /** From 1 to 100, the smaller the value, the higher the priority */
+  rank?: InputMaybe<Scalars['Int']['input']>;
   unity_category_id?: InputMaybe<Scalars['Int']['input']>;
 };
 
 /** input type for inserting data into table "nanisore.product" */
 export type Nanisore_Product_Insert_Input = {
   category_material?: InputMaybe<Nanisore_Category_Material_Obj_Rel_Insert_Input>;
-  category_material_id?: InputMaybe<Scalars['Int']['input']>;
   cover_image?: InputMaybe<Scalars['String']['input']>;
   created_at?: InputMaybe<Scalars['timestamptz']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
@@ -5117,9 +5334,12 @@ export type Nanisore_Product_Insert_Input = {
   platform?: InputMaybe<Nanisore_Platform_Obj_Rel_Insert_Input>;
   platform_id?: InputMaybe<Scalars['Int']['input']>;
   price?: InputMaybe<Scalars['numeric']['input']>;
+  /** From 1 to 100, the smaller the value, the higher the priority */
+  rank?: InputMaybe<Scalars['Int']['input']>;
+  /** Format: actual score/full score */
+  review?: InputMaybe<Scalars['String']['input']>;
   sku?: InputMaybe<Scalars['String']['input']>;
   stock_info?: InputMaybe<Nanisore_Stock_Info_Obj_Rel_Insert_Input>;
-  stock_info_id?: InputMaybe<Scalars['Int']['input']>;
   unity_category?: InputMaybe<Nanisore_Unity_Category_Obj_Rel_Insert_Input>;
   unity_category_id?: InputMaybe<Scalars['Int']['input']>;
   updated_at?: InputMaybe<Scalars['timestamptz']['input']>;
@@ -5130,7 +5350,6 @@ export type Nanisore_Product_Insert_Input = {
 /** aggregate max on columns */
 export type Nanisore_Product_Max_Fields = {
   __typename?: 'nanisore_product_max_fields';
-  category_material_id?: Maybe<Scalars['Int']['output']>;
   cover_image?: Maybe<Scalars['String']['output']>;
   created_at?: Maybe<Scalars['timestamptz']['output']>;
   description?: Maybe<Scalars['String']['output']>;
@@ -5142,8 +5361,11 @@ export type Nanisore_Product_Max_Fields = {
   original_id?: Maybe<Scalars['String']['output']>;
   platform_id?: Maybe<Scalars['Int']['output']>;
   price?: Maybe<Scalars['numeric']['output']>;
+  /** From 1 to 100, the smaller the value, the higher the priority */
+  rank?: Maybe<Scalars['Int']['output']>;
+  /** Format: actual score/full score */
+  review?: Maybe<Scalars['String']['output']>;
   sku?: Maybe<Scalars['String']['output']>;
-  stock_info_id?: Maybe<Scalars['Int']['output']>;
   unity_category_id?: Maybe<Scalars['Int']['output']>;
   updated_at?: Maybe<Scalars['timestamptz']['output']>;
   url?: Maybe<Scalars['String']['output']>;
@@ -5151,7 +5373,6 @@ export type Nanisore_Product_Max_Fields = {
 
 /** order by max() on columns of table "nanisore.product" */
 export type Nanisore_Product_Max_Order_By = {
-  category_material_id?: InputMaybe<Order_By>;
   cover_image?: InputMaybe<Order_By>;
   created_at?: InputMaybe<Order_By>;
   description?: InputMaybe<Order_By>;
@@ -5163,8 +5384,11 @@ export type Nanisore_Product_Max_Order_By = {
   original_id?: InputMaybe<Order_By>;
   platform_id?: InputMaybe<Order_By>;
   price?: InputMaybe<Order_By>;
+  /** From 1 to 100, the smaller the value, the higher the priority */
+  rank?: InputMaybe<Order_By>;
+  /** Format: actual score/full score */
+  review?: InputMaybe<Order_By>;
   sku?: InputMaybe<Order_By>;
-  stock_info_id?: InputMaybe<Order_By>;
   unity_category_id?: InputMaybe<Order_By>;
   updated_at?: InputMaybe<Order_By>;
   url?: InputMaybe<Order_By>;
@@ -5173,7 +5397,6 @@ export type Nanisore_Product_Max_Order_By = {
 /** aggregate min on columns */
 export type Nanisore_Product_Min_Fields = {
   __typename?: 'nanisore_product_min_fields';
-  category_material_id?: Maybe<Scalars['Int']['output']>;
   cover_image?: Maybe<Scalars['String']['output']>;
   created_at?: Maybe<Scalars['timestamptz']['output']>;
   description?: Maybe<Scalars['String']['output']>;
@@ -5185,8 +5408,11 @@ export type Nanisore_Product_Min_Fields = {
   original_id?: Maybe<Scalars['String']['output']>;
   platform_id?: Maybe<Scalars['Int']['output']>;
   price?: Maybe<Scalars['numeric']['output']>;
+  /** From 1 to 100, the smaller the value, the higher the priority */
+  rank?: Maybe<Scalars['Int']['output']>;
+  /** Format: actual score/full score */
+  review?: Maybe<Scalars['String']['output']>;
   sku?: Maybe<Scalars['String']['output']>;
-  stock_info_id?: Maybe<Scalars['Int']['output']>;
   unity_category_id?: Maybe<Scalars['Int']['output']>;
   updated_at?: Maybe<Scalars['timestamptz']['output']>;
   url?: Maybe<Scalars['String']['output']>;
@@ -5194,7 +5420,6 @@ export type Nanisore_Product_Min_Fields = {
 
 /** order by min() on columns of table "nanisore.product" */
 export type Nanisore_Product_Min_Order_By = {
-  category_material_id?: InputMaybe<Order_By>;
   cover_image?: InputMaybe<Order_By>;
   created_at?: InputMaybe<Order_By>;
   description?: InputMaybe<Order_By>;
@@ -5206,8 +5431,11 @@ export type Nanisore_Product_Min_Order_By = {
   original_id?: InputMaybe<Order_By>;
   platform_id?: InputMaybe<Order_By>;
   price?: InputMaybe<Order_By>;
+  /** From 1 to 100, the smaller the value, the higher the priority */
+  rank?: InputMaybe<Order_By>;
+  /** Format: actual score/full score */
+  review?: InputMaybe<Order_By>;
   sku?: InputMaybe<Order_By>;
-  stock_info_id?: InputMaybe<Order_By>;
   unity_category_id?: InputMaybe<Order_By>;
   updated_at?: InputMaybe<Order_By>;
   url?: InputMaybe<Order_By>;
@@ -5239,7 +5467,6 @@ export type Nanisore_Product_On_Conflict = {
 /** Ordering options when selecting data from "nanisore.product". */
 export type Nanisore_Product_Order_By = {
   category_material?: InputMaybe<Nanisore_Category_Material_Order_By>;
-  category_material_id?: InputMaybe<Order_By>;
   cover_image?: InputMaybe<Order_By>;
   created_at?: InputMaybe<Order_By>;
   description?: InputMaybe<Order_By>;
@@ -5254,9 +5481,10 @@ export type Nanisore_Product_Order_By = {
   platform?: InputMaybe<Nanisore_Platform_Order_By>;
   platform_id?: InputMaybe<Order_By>;
   price?: InputMaybe<Order_By>;
+  rank?: InputMaybe<Order_By>;
+  review?: InputMaybe<Order_By>;
   sku?: InputMaybe<Order_By>;
   stock_info?: InputMaybe<Nanisore_Stock_Info_Order_By>;
-  stock_info_id?: InputMaybe<Order_By>;
   unity_category?: InputMaybe<Nanisore_Unity_Category_Order_By>;
   unity_category_id?: InputMaybe<Order_By>;
   updated_at?: InputMaybe<Order_By>;
@@ -5271,8 +5499,6 @@ export type Nanisore_Product_Pk_Columns_Input = {
 
 /** select columns of table "nanisore.product" */
 export enum Nanisore_Product_Select_Column {
-  /** column name */
-  CategoryMaterialId = 'category_material_id',
   /** column name */
   CoverImage = 'cover_image',
   /** column name */
@@ -5296,9 +5522,11 @@ export enum Nanisore_Product_Select_Column {
   /** column name */
   Price = 'price',
   /** column name */
-  Sku = 'sku',
+  Rank = 'rank',
   /** column name */
-  StockInfoId = 'stock_info_id',
+  Review = 'review',
+  /** column name */
+  Sku = 'sku',
   /** column name */
   UnityCategoryId = 'unity_category_id',
   /** column name */
@@ -5323,7 +5551,6 @@ export enum Nanisore_Product_Select_Column_Nanisore_Product_Aggregate_Bool_Exp_B
 
 /** input type for updating data in table "nanisore.product" */
 export type Nanisore_Product_Set_Input = {
-  category_material_id?: InputMaybe<Scalars['Int']['input']>;
   cover_image?: InputMaybe<Scalars['String']['input']>;
   created_at?: InputMaybe<Scalars['timestamptz']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
@@ -5335,8 +5562,11 @@ export type Nanisore_Product_Set_Input = {
   original_id?: InputMaybe<Scalars['String']['input']>;
   platform_id?: InputMaybe<Scalars['Int']['input']>;
   price?: InputMaybe<Scalars['numeric']['input']>;
+  /** From 1 to 100, the smaller the value, the higher the priority */
+  rank?: InputMaybe<Scalars['Int']['input']>;
+  /** Format: actual score/full score */
+  review?: InputMaybe<Scalars['String']['input']>;
   sku?: InputMaybe<Scalars['String']['input']>;
-  stock_info_id?: InputMaybe<Scalars['Int']['input']>;
   unity_category_id?: InputMaybe<Scalars['Int']['input']>;
   updated_at?: InputMaybe<Scalars['timestamptz']['input']>;
   url?: InputMaybe<Scalars['String']['input']>;
@@ -5346,75 +5576,75 @@ export type Nanisore_Product_Set_Input = {
 /** aggregate stddev on columns */
 export type Nanisore_Product_Stddev_Fields = {
   __typename?: 'nanisore_product_stddev_fields';
-  category_material_id?: Maybe<Scalars['Float']['output']>;
   group_id?: Maybe<Scalars['Float']['output']>;
   id?: Maybe<Scalars['Float']['output']>;
   original_category_id?: Maybe<Scalars['Float']['output']>;
   platform_id?: Maybe<Scalars['Float']['output']>;
   price?: Maybe<Scalars['Float']['output']>;
-  stock_info_id?: Maybe<Scalars['Float']['output']>;
+  /** From 1 to 100, the smaller the value, the higher the priority */
+  rank?: Maybe<Scalars['Float']['output']>;
   unity_category_id?: Maybe<Scalars['Float']['output']>;
 };
 
 /** order by stddev() on columns of table "nanisore.product" */
 export type Nanisore_Product_Stddev_Order_By = {
-  category_material_id?: InputMaybe<Order_By>;
   group_id?: InputMaybe<Order_By>;
   id?: InputMaybe<Order_By>;
   original_category_id?: InputMaybe<Order_By>;
   platform_id?: InputMaybe<Order_By>;
   price?: InputMaybe<Order_By>;
-  stock_info_id?: InputMaybe<Order_By>;
+  /** From 1 to 100, the smaller the value, the higher the priority */
+  rank?: InputMaybe<Order_By>;
   unity_category_id?: InputMaybe<Order_By>;
 };
 
 /** aggregate stddev_pop on columns */
 export type Nanisore_Product_Stddev_Pop_Fields = {
   __typename?: 'nanisore_product_stddev_pop_fields';
-  category_material_id?: Maybe<Scalars['Float']['output']>;
   group_id?: Maybe<Scalars['Float']['output']>;
   id?: Maybe<Scalars['Float']['output']>;
   original_category_id?: Maybe<Scalars['Float']['output']>;
   platform_id?: Maybe<Scalars['Float']['output']>;
   price?: Maybe<Scalars['Float']['output']>;
-  stock_info_id?: Maybe<Scalars['Float']['output']>;
+  /** From 1 to 100, the smaller the value, the higher the priority */
+  rank?: Maybe<Scalars['Float']['output']>;
   unity_category_id?: Maybe<Scalars['Float']['output']>;
 };
 
 /** order by stddev_pop() on columns of table "nanisore.product" */
 export type Nanisore_Product_Stddev_Pop_Order_By = {
-  category_material_id?: InputMaybe<Order_By>;
   group_id?: InputMaybe<Order_By>;
   id?: InputMaybe<Order_By>;
   original_category_id?: InputMaybe<Order_By>;
   platform_id?: InputMaybe<Order_By>;
   price?: InputMaybe<Order_By>;
-  stock_info_id?: InputMaybe<Order_By>;
+  /** From 1 to 100, the smaller the value, the higher the priority */
+  rank?: InputMaybe<Order_By>;
   unity_category_id?: InputMaybe<Order_By>;
 };
 
 /** aggregate stddev_samp on columns */
 export type Nanisore_Product_Stddev_Samp_Fields = {
   __typename?: 'nanisore_product_stddev_samp_fields';
-  category_material_id?: Maybe<Scalars['Float']['output']>;
   group_id?: Maybe<Scalars['Float']['output']>;
   id?: Maybe<Scalars['Float']['output']>;
   original_category_id?: Maybe<Scalars['Float']['output']>;
   platform_id?: Maybe<Scalars['Float']['output']>;
   price?: Maybe<Scalars['Float']['output']>;
-  stock_info_id?: Maybe<Scalars['Float']['output']>;
+  /** From 1 to 100, the smaller the value, the higher the priority */
+  rank?: Maybe<Scalars['Float']['output']>;
   unity_category_id?: Maybe<Scalars['Float']['output']>;
 };
 
 /** order by stddev_samp() on columns of table "nanisore.product" */
 export type Nanisore_Product_Stddev_Samp_Order_By = {
-  category_material_id?: InputMaybe<Order_By>;
   group_id?: InputMaybe<Order_By>;
   id?: InputMaybe<Order_By>;
   original_category_id?: InputMaybe<Order_By>;
   platform_id?: InputMaybe<Order_By>;
   price?: InputMaybe<Order_By>;
-  stock_info_id?: InputMaybe<Order_By>;
+  /** From 1 to 100, the smaller the value, the higher the priority */
+  rank?: InputMaybe<Order_By>;
   unity_category_id?: InputMaybe<Order_By>;
 };
 
@@ -5428,7 +5658,6 @@ export type Nanisore_Product_Stream_Cursor_Input = {
 
 /** Initial value of the column from where the streaming should start */
 export type Nanisore_Product_Stream_Cursor_Value_Input = {
-  category_material_id?: InputMaybe<Scalars['Int']['input']>;
   cover_image?: InputMaybe<Scalars['String']['input']>;
   created_at?: InputMaybe<Scalars['timestamptz']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
@@ -5440,8 +5669,11 @@ export type Nanisore_Product_Stream_Cursor_Value_Input = {
   original_id?: InputMaybe<Scalars['String']['input']>;
   platform_id?: InputMaybe<Scalars['Int']['input']>;
   price?: InputMaybe<Scalars['numeric']['input']>;
+  /** From 1 to 100, the smaller the value, the higher the priority */
+  rank?: InputMaybe<Scalars['Int']['input']>;
+  /** Format: actual score/full score */
+  review?: InputMaybe<Scalars['String']['input']>;
   sku?: InputMaybe<Scalars['String']['input']>;
-  stock_info_id?: InputMaybe<Scalars['Int']['input']>;
   unity_category_id?: InputMaybe<Scalars['Int']['input']>;
   updated_at?: InputMaybe<Scalars['timestamptz']['input']>;
   url?: InputMaybe<Scalars['String']['input']>;
@@ -5451,32 +5683,30 @@ export type Nanisore_Product_Stream_Cursor_Value_Input = {
 /** aggregate sum on columns */
 export type Nanisore_Product_Sum_Fields = {
   __typename?: 'nanisore_product_sum_fields';
-  category_material_id?: Maybe<Scalars['Int']['output']>;
   group_id?: Maybe<Scalars['bigint']['output']>;
   id?: Maybe<Scalars['bigint']['output']>;
   original_category_id?: Maybe<Scalars['Int']['output']>;
   platform_id?: Maybe<Scalars['Int']['output']>;
   price?: Maybe<Scalars['numeric']['output']>;
-  stock_info_id?: Maybe<Scalars['Int']['output']>;
+  /** From 1 to 100, the smaller the value, the higher the priority */
+  rank?: Maybe<Scalars['Int']['output']>;
   unity_category_id?: Maybe<Scalars['Int']['output']>;
 };
 
 /** order by sum() on columns of table "nanisore.product" */
 export type Nanisore_Product_Sum_Order_By = {
-  category_material_id?: InputMaybe<Order_By>;
   group_id?: InputMaybe<Order_By>;
   id?: InputMaybe<Order_By>;
   original_category_id?: InputMaybe<Order_By>;
   platform_id?: InputMaybe<Order_By>;
   price?: InputMaybe<Order_By>;
-  stock_info_id?: InputMaybe<Order_By>;
+  /** From 1 to 100, the smaller the value, the higher the priority */
+  rank?: InputMaybe<Order_By>;
   unity_category_id?: InputMaybe<Order_By>;
 };
 
 /** update columns of table "nanisore.product" */
 export enum Nanisore_Product_Update_Column {
-  /** column name */
-  CategoryMaterialId = 'category_material_id',
   /** column name */
   CoverImage = 'cover_image',
   /** column name */
@@ -5500,9 +5730,11 @@ export enum Nanisore_Product_Update_Column {
   /** column name */
   Price = 'price',
   /** column name */
-  Sku = 'sku',
+  Rank = 'rank',
   /** column name */
-  StockInfoId = 'stock_info_id',
+  Review = 'review',
+  /** column name */
+  Sku = 'sku',
   /** column name */
   UnityCategoryId = 'unity_category_id',
   /** column name */
@@ -5525,75 +5757,75 @@ export type Nanisore_Product_Updates = {
 /** aggregate var_pop on columns */
 export type Nanisore_Product_Var_Pop_Fields = {
   __typename?: 'nanisore_product_var_pop_fields';
-  category_material_id?: Maybe<Scalars['Float']['output']>;
   group_id?: Maybe<Scalars['Float']['output']>;
   id?: Maybe<Scalars['Float']['output']>;
   original_category_id?: Maybe<Scalars['Float']['output']>;
   platform_id?: Maybe<Scalars['Float']['output']>;
   price?: Maybe<Scalars['Float']['output']>;
-  stock_info_id?: Maybe<Scalars['Float']['output']>;
+  /** From 1 to 100, the smaller the value, the higher the priority */
+  rank?: Maybe<Scalars['Float']['output']>;
   unity_category_id?: Maybe<Scalars['Float']['output']>;
 };
 
 /** order by var_pop() on columns of table "nanisore.product" */
 export type Nanisore_Product_Var_Pop_Order_By = {
-  category_material_id?: InputMaybe<Order_By>;
   group_id?: InputMaybe<Order_By>;
   id?: InputMaybe<Order_By>;
   original_category_id?: InputMaybe<Order_By>;
   platform_id?: InputMaybe<Order_By>;
   price?: InputMaybe<Order_By>;
-  stock_info_id?: InputMaybe<Order_By>;
+  /** From 1 to 100, the smaller the value, the higher the priority */
+  rank?: InputMaybe<Order_By>;
   unity_category_id?: InputMaybe<Order_By>;
 };
 
 /** aggregate var_samp on columns */
 export type Nanisore_Product_Var_Samp_Fields = {
   __typename?: 'nanisore_product_var_samp_fields';
-  category_material_id?: Maybe<Scalars['Float']['output']>;
   group_id?: Maybe<Scalars['Float']['output']>;
   id?: Maybe<Scalars['Float']['output']>;
   original_category_id?: Maybe<Scalars['Float']['output']>;
   platform_id?: Maybe<Scalars['Float']['output']>;
   price?: Maybe<Scalars['Float']['output']>;
-  stock_info_id?: Maybe<Scalars['Float']['output']>;
+  /** From 1 to 100, the smaller the value, the higher the priority */
+  rank?: Maybe<Scalars['Float']['output']>;
   unity_category_id?: Maybe<Scalars['Float']['output']>;
 };
 
 /** order by var_samp() on columns of table "nanisore.product" */
 export type Nanisore_Product_Var_Samp_Order_By = {
-  category_material_id?: InputMaybe<Order_By>;
   group_id?: InputMaybe<Order_By>;
   id?: InputMaybe<Order_By>;
   original_category_id?: InputMaybe<Order_By>;
   platform_id?: InputMaybe<Order_By>;
   price?: InputMaybe<Order_By>;
-  stock_info_id?: InputMaybe<Order_By>;
+  /** From 1 to 100, the smaller the value, the higher the priority */
+  rank?: InputMaybe<Order_By>;
   unity_category_id?: InputMaybe<Order_By>;
 };
 
 /** aggregate variance on columns */
 export type Nanisore_Product_Variance_Fields = {
   __typename?: 'nanisore_product_variance_fields';
-  category_material_id?: Maybe<Scalars['Float']['output']>;
   group_id?: Maybe<Scalars['Float']['output']>;
   id?: Maybe<Scalars['Float']['output']>;
   original_category_id?: Maybe<Scalars['Float']['output']>;
   platform_id?: Maybe<Scalars['Float']['output']>;
   price?: Maybe<Scalars['Float']['output']>;
-  stock_info_id?: Maybe<Scalars['Float']['output']>;
+  /** From 1 to 100, the smaller the value, the higher the priority */
+  rank?: Maybe<Scalars['Float']['output']>;
   unity_category_id?: Maybe<Scalars['Float']['output']>;
 };
 
 /** order by variance() on columns of table "nanisore.product" */
 export type Nanisore_Product_Variance_Order_By = {
-  category_material_id?: InputMaybe<Order_By>;
   group_id?: InputMaybe<Order_By>;
   id?: InputMaybe<Order_By>;
   original_category_id?: InputMaybe<Order_By>;
   platform_id?: InputMaybe<Order_By>;
   price?: InputMaybe<Order_By>;
-  stock_info_id?: InputMaybe<Order_By>;
+  /** From 1 to 100, the smaller the value, the higher the priority */
+  rank?: InputMaybe<Order_By>;
   unity_category_id?: InputMaybe<Order_By>;
 };
 
@@ -7581,6 +7813,7 @@ export type Nanisore_Stock_Info = {
   id: Scalars['Int']['output'];
   /** An object relationship */
   product?: Maybe<Nanisore_Product>;
+  product_id?: Maybe<Scalars['bigint']['output']>;
   raw: Scalars['String']['output'];
   /** 0 for out of stock, 1 for in stock, 2 for pre-order */
   status: Scalars['Int']['output'];
@@ -7621,6 +7854,7 @@ export type Nanisore_Stock_Info_Aggregate_FieldsCountArgs = {
 export type Nanisore_Stock_Info_Avg_Fields = {
   __typename?: 'nanisore_stock_info_avg_fields';
   id?: Maybe<Scalars['Float']['output']>;
+  product_id?: Maybe<Scalars['Float']['output']>;
   /** 0 for out of stock, 1 for in stock, 2 for pre-order */
   status?: Maybe<Scalars['Float']['output']>;
 };
@@ -7633,6 +7867,7 @@ export type Nanisore_Stock_Info_Bool_Exp = {
   created_at?: InputMaybe<Timestamptz_Comparison_Exp>;
   id?: InputMaybe<Int_Comparison_Exp>;
   product?: InputMaybe<Nanisore_Product_Bool_Exp>;
+  product_id?: InputMaybe<Bigint_Comparison_Exp>;
   raw?: InputMaybe<String_Comparison_Exp>;
   status?: InputMaybe<Int_Comparison_Exp>;
   updated_at?: InputMaybe<Timestamptz_Comparison_Exp>;
@@ -7641,12 +7876,15 @@ export type Nanisore_Stock_Info_Bool_Exp = {
 /** unique or primary key constraints on table "nanisore.stock_info" */
 export enum Nanisore_Stock_Info_Constraint {
   /** unique or primary key constraint on columns "id" */
-  StockInfoPkey = 'stock_info_pkey'
+  StockInfoPkey = 'stock_info_pkey',
+  /** unique or primary key constraint on columns "product_id" */
+  StockInfoProductIdKey = 'stock_info_product_id_key'
 }
 
 /** input type for incrementing numeric columns in table "nanisore.stock_info" */
 export type Nanisore_Stock_Info_Inc_Input = {
   id?: InputMaybe<Scalars['Int']['input']>;
+  product_id?: InputMaybe<Scalars['bigint']['input']>;
   /** 0 for out of stock, 1 for in stock, 2 for pre-order */
   status?: InputMaybe<Scalars['Int']['input']>;
 };
@@ -7656,6 +7894,7 @@ export type Nanisore_Stock_Info_Insert_Input = {
   created_at?: InputMaybe<Scalars['timestamptz']['input']>;
   id?: InputMaybe<Scalars['Int']['input']>;
   product?: InputMaybe<Nanisore_Product_Obj_Rel_Insert_Input>;
+  product_id?: InputMaybe<Scalars['bigint']['input']>;
   raw?: InputMaybe<Scalars['String']['input']>;
   /** 0 for out of stock, 1 for in stock, 2 for pre-order */
   status?: InputMaybe<Scalars['Int']['input']>;
@@ -7667,6 +7906,7 @@ export type Nanisore_Stock_Info_Max_Fields = {
   __typename?: 'nanisore_stock_info_max_fields';
   created_at?: Maybe<Scalars['timestamptz']['output']>;
   id?: Maybe<Scalars['Int']['output']>;
+  product_id?: Maybe<Scalars['bigint']['output']>;
   raw?: Maybe<Scalars['String']['output']>;
   /** 0 for out of stock, 1 for in stock, 2 for pre-order */
   status?: Maybe<Scalars['Int']['output']>;
@@ -7678,6 +7918,7 @@ export type Nanisore_Stock_Info_Min_Fields = {
   __typename?: 'nanisore_stock_info_min_fields';
   created_at?: Maybe<Scalars['timestamptz']['output']>;
   id?: Maybe<Scalars['Int']['output']>;
+  product_id?: Maybe<Scalars['bigint']['output']>;
   raw?: Maybe<Scalars['String']['output']>;
   /** 0 for out of stock, 1 for in stock, 2 for pre-order */
   status?: Maybe<Scalars['Int']['output']>;
@@ -7712,6 +7953,7 @@ export type Nanisore_Stock_Info_Order_By = {
   created_at?: InputMaybe<Order_By>;
   id?: InputMaybe<Order_By>;
   product?: InputMaybe<Nanisore_Product_Order_By>;
+  product_id?: InputMaybe<Order_By>;
   raw?: InputMaybe<Order_By>;
   status?: InputMaybe<Order_By>;
   updated_at?: InputMaybe<Order_By>;
@@ -7729,6 +7971,8 @@ export enum Nanisore_Stock_Info_Select_Column {
   /** column name */
   Id = 'id',
   /** column name */
+  ProductId = 'product_id',
+  /** column name */
   Raw = 'raw',
   /** column name */
   Status = 'status',
@@ -7740,6 +7984,7 @@ export enum Nanisore_Stock_Info_Select_Column {
 export type Nanisore_Stock_Info_Set_Input = {
   created_at?: InputMaybe<Scalars['timestamptz']['input']>;
   id?: InputMaybe<Scalars['Int']['input']>;
+  product_id?: InputMaybe<Scalars['bigint']['input']>;
   raw?: InputMaybe<Scalars['String']['input']>;
   /** 0 for out of stock, 1 for in stock, 2 for pre-order */
   status?: InputMaybe<Scalars['Int']['input']>;
@@ -7750,6 +7995,7 @@ export type Nanisore_Stock_Info_Set_Input = {
 export type Nanisore_Stock_Info_Stddev_Fields = {
   __typename?: 'nanisore_stock_info_stddev_fields';
   id?: Maybe<Scalars['Float']['output']>;
+  product_id?: Maybe<Scalars['Float']['output']>;
   /** 0 for out of stock, 1 for in stock, 2 for pre-order */
   status?: Maybe<Scalars['Float']['output']>;
 };
@@ -7758,6 +8004,7 @@ export type Nanisore_Stock_Info_Stddev_Fields = {
 export type Nanisore_Stock_Info_Stddev_Pop_Fields = {
   __typename?: 'nanisore_stock_info_stddev_pop_fields';
   id?: Maybe<Scalars['Float']['output']>;
+  product_id?: Maybe<Scalars['Float']['output']>;
   /** 0 for out of stock, 1 for in stock, 2 for pre-order */
   status?: Maybe<Scalars['Float']['output']>;
 };
@@ -7766,6 +8013,7 @@ export type Nanisore_Stock_Info_Stddev_Pop_Fields = {
 export type Nanisore_Stock_Info_Stddev_Samp_Fields = {
   __typename?: 'nanisore_stock_info_stddev_samp_fields';
   id?: Maybe<Scalars['Float']['output']>;
+  product_id?: Maybe<Scalars['Float']['output']>;
   /** 0 for out of stock, 1 for in stock, 2 for pre-order */
   status?: Maybe<Scalars['Float']['output']>;
 };
@@ -7782,6 +8030,7 @@ export type Nanisore_Stock_Info_Stream_Cursor_Input = {
 export type Nanisore_Stock_Info_Stream_Cursor_Value_Input = {
   created_at?: InputMaybe<Scalars['timestamptz']['input']>;
   id?: InputMaybe<Scalars['Int']['input']>;
+  product_id?: InputMaybe<Scalars['bigint']['input']>;
   raw?: InputMaybe<Scalars['String']['input']>;
   /** 0 for out of stock, 1 for in stock, 2 for pre-order */
   status?: InputMaybe<Scalars['Int']['input']>;
@@ -7792,6 +8041,7 @@ export type Nanisore_Stock_Info_Stream_Cursor_Value_Input = {
 export type Nanisore_Stock_Info_Sum_Fields = {
   __typename?: 'nanisore_stock_info_sum_fields';
   id?: Maybe<Scalars['Int']['output']>;
+  product_id?: Maybe<Scalars['bigint']['output']>;
   /** 0 for out of stock, 1 for in stock, 2 for pre-order */
   status?: Maybe<Scalars['Int']['output']>;
 };
@@ -7802,6 +8052,8 @@ export enum Nanisore_Stock_Info_Update_Column {
   CreatedAt = 'created_at',
   /** column name */
   Id = 'id',
+  /** column name */
+  ProductId = 'product_id',
   /** column name */
   Raw = 'raw',
   /** column name */
@@ -7823,6 +8075,7 @@ export type Nanisore_Stock_Info_Updates = {
 export type Nanisore_Stock_Info_Var_Pop_Fields = {
   __typename?: 'nanisore_stock_info_var_pop_fields';
   id?: Maybe<Scalars['Float']['output']>;
+  product_id?: Maybe<Scalars['Float']['output']>;
   /** 0 for out of stock, 1 for in stock, 2 for pre-order */
   status?: Maybe<Scalars['Float']['output']>;
 };
@@ -7831,6 +8084,7 @@ export type Nanisore_Stock_Info_Var_Pop_Fields = {
 export type Nanisore_Stock_Info_Var_Samp_Fields = {
   __typename?: 'nanisore_stock_info_var_samp_fields';
   id?: Maybe<Scalars['Float']['output']>;
+  product_id?: Maybe<Scalars['Float']['output']>;
   /** 0 for out of stock, 1 for in stock, 2 for pre-order */
   status?: Maybe<Scalars['Float']['output']>;
 };
@@ -7839,6 +8093,7 @@ export type Nanisore_Stock_Info_Var_Samp_Fields = {
 export type Nanisore_Stock_Info_Variance_Fields = {
   __typename?: 'nanisore_stock_info_variance_fields';
   id?: Maybe<Scalars['Float']['output']>;
+  product_id?: Maybe<Scalars['Float']['output']>;
   /** 0 for out of stock, 1 for in stock, 2 for pre-order */
   status?: Maybe<Scalars['Float']['output']>;
 };
@@ -8807,18 +9062,36 @@ export type Query_Root = {
   nanisore_user_aggregate: Nanisore_User_Aggregate;
   /** fetch data from the table: "nanisore.user" using primary key columns */
   nanisore_user_by_pk?: Maybe<Nanisore_User>;
+  /** fetch data from the table: "scraper.child" */
+  scraper_child: Array<Scraper_Child>;
+  /** fetch aggregated fields from the table: "scraper.child" */
+  scraper_child_aggregate: Scraper_Child_Aggregate;
+  /** fetch data from the table: "scraper.child" using primary key columns */
+  scraper_child_by_pk?: Maybe<Scraper_Child>;
   /** fetch data from the table: "scraper.item" */
   scraper_item: Array<Scraper_Item>;
   /** fetch aggregated fields from the table: "scraper.item" */
   scraper_item_aggregate: Scraper_Item_Aggregate;
   /** fetch data from the table: "scraper.item" using primary key columns */
   scraper_item_by_pk?: Maybe<Scraper_Item>;
+  /** fetch data from the table: "scraper.parent" */
+  scraper_parent: Array<Scraper_Parent>;
+  /** fetch aggregated fields from the table: "scraper.parent" */
+  scraper_parent_aggregate: Scraper_Parent_Aggregate;
+  /** fetch data from the table: "scraper.parent" using primary key columns */
+  scraper_parent_by_pk?: Maybe<Scraper_Parent>;
   /** fetch data from the table: "scraper.run" */
   scraper_run: Array<Scraper_Run>;
   /** fetch aggregated fields from the table: "scraper.run" */
   scraper_run_aggregate: Scraper_Run_Aggregate;
   /** fetch data from the table: "scraper.run" using primary key columns */
   scraper_run_by_pk?: Maybe<Scraper_Run>;
+  /** fetch data from the table: "scraper.run_v2" */
+  scraper_run_v2: Array<Scraper_Run_V2>;
+  /** fetch aggregated fields from the table: "scraper.run_v2" */
+  scraper_run_v2_aggregate: Scraper_Run_V2_Aggregate;
+  /** fetch data from the table: "scraper.run_v2" using primary key columns */
+  scraper_run_v2_by_pk?: Maybe<Scraper_Run_V2>;
   /** fetch data from the table: "scraper.scrape_later" */
   scraper_scrape_later: Array<Scraper_Scrape_Later>;
   /** fetch aggregated fields from the table: "scraper.scrape_later" */
@@ -9316,6 +9589,29 @@ export type Query_RootNanisore_User_By_PkArgs = {
 };
 
 
+export type Query_RootScraper_ChildArgs = {
+  distinct_on?: InputMaybe<Array<Scraper_Child_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  offset?: InputMaybe<Scalars['Int']['input']>;
+  order_by?: InputMaybe<Array<Scraper_Child_Order_By>>;
+  where?: InputMaybe<Scraper_Child_Bool_Exp>;
+};
+
+
+export type Query_RootScraper_Child_AggregateArgs = {
+  distinct_on?: InputMaybe<Array<Scraper_Child_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  offset?: InputMaybe<Scalars['Int']['input']>;
+  order_by?: InputMaybe<Array<Scraper_Child_Order_By>>;
+  where?: InputMaybe<Scraper_Child_Bool_Exp>;
+};
+
+
+export type Query_RootScraper_Child_By_PkArgs = {
+  id: Scalars['bigint']['input'];
+};
+
+
 export type Query_RootScraper_ItemArgs = {
   distinct_on?: InputMaybe<Array<Scraper_Item_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']['input']>;
@@ -9336,6 +9632,29 @@ export type Query_RootScraper_Item_AggregateArgs = {
 
 export type Query_RootScraper_Item_By_PkArgs = {
   id: Scalars['Int']['input'];
+};
+
+
+export type Query_RootScraper_ParentArgs = {
+  distinct_on?: InputMaybe<Array<Scraper_Parent_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  offset?: InputMaybe<Scalars['Int']['input']>;
+  order_by?: InputMaybe<Array<Scraper_Parent_Order_By>>;
+  where?: InputMaybe<Scraper_Parent_Bool_Exp>;
+};
+
+
+export type Query_RootScraper_Parent_AggregateArgs = {
+  distinct_on?: InputMaybe<Array<Scraper_Parent_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  offset?: InputMaybe<Scalars['Int']['input']>;
+  order_by?: InputMaybe<Array<Scraper_Parent_Order_By>>;
+  where?: InputMaybe<Scraper_Parent_Bool_Exp>;
+};
+
+
+export type Query_RootScraper_Parent_By_PkArgs = {
+  id: Scalars['bigint']['input'];
 };
 
 
@@ -9362,6 +9681,29 @@ export type Query_RootScraper_Run_By_PkArgs = {
 };
 
 
+export type Query_RootScraper_Run_V2Args = {
+  distinct_on?: InputMaybe<Array<Scraper_Run_V2_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  offset?: InputMaybe<Scalars['Int']['input']>;
+  order_by?: InputMaybe<Array<Scraper_Run_V2_Order_By>>;
+  where?: InputMaybe<Scraper_Run_V2_Bool_Exp>;
+};
+
+
+export type Query_RootScraper_Run_V2_AggregateArgs = {
+  distinct_on?: InputMaybe<Array<Scraper_Run_V2_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  offset?: InputMaybe<Scalars['Int']['input']>;
+  order_by?: InputMaybe<Array<Scraper_Run_V2_Order_By>>;
+  where?: InputMaybe<Scraper_Run_V2_Bool_Exp>;
+};
+
+
+export type Query_RootScraper_Run_V2_By_PkArgs = {
+  id: Scalars['Int']['input'];
+};
+
+
 export type Query_RootScraper_Scrape_LaterArgs = {
   distinct_on?: InputMaybe<Array<Scraper_Scrape_Later_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']['input']>;
@@ -9382,6 +9724,238 @@ export type Query_RootScraper_Scrape_Later_AggregateArgs = {
 
 export type Query_RootScraper_Scrape_Later_By_PkArgs = {
   id: Scalars['Int']['input'];
+};
+
+/** columns and relationships of "scraper.child" */
+export type Scraper_Child = {
+  __typename?: 'scraper_child';
+  id: Scalars['bigint']['output'];
+  name: Scalars['String']['output'];
+  /** An object relationship */
+  parent: Scraper_Parent;
+  parent_id: Scalars['Int']['output'];
+};
+
+/** aggregated selection of "scraper.child" */
+export type Scraper_Child_Aggregate = {
+  __typename?: 'scraper_child_aggregate';
+  aggregate?: Maybe<Scraper_Child_Aggregate_Fields>;
+  nodes: Array<Scraper_Child>;
+};
+
+/** aggregate fields of "scraper.child" */
+export type Scraper_Child_Aggregate_Fields = {
+  __typename?: 'scraper_child_aggregate_fields';
+  avg?: Maybe<Scraper_Child_Avg_Fields>;
+  count: Scalars['Int']['output'];
+  max?: Maybe<Scraper_Child_Max_Fields>;
+  min?: Maybe<Scraper_Child_Min_Fields>;
+  stddev?: Maybe<Scraper_Child_Stddev_Fields>;
+  stddev_pop?: Maybe<Scraper_Child_Stddev_Pop_Fields>;
+  stddev_samp?: Maybe<Scraper_Child_Stddev_Samp_Fields>;
+  sum?: Maybe<Scraper_Child_Sum_Fields>;
+  var_pop?: Maybe<Scraper_Child_Var_Pop_Fields>;
+  var_samp?: Maybe<Scraper_Child_Var_Samp_Fields>;
+  variance?: Maybe<Scraper_Child_Variance_Fields>;
+};
+
+
+/** aggregate fields of "scraper.child" */
+export type Scraper_Child_Aggregate_FieldsCountArgs = {
+  columns?: InputMaybe<Array<Scraper_Child_Select_Column>>;
+  distinct?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+/** aggregate avg on columns */
+export type Scraper_Child_Avg_Fields = {
+  __typename?: 'scraper_child_avg_fields';
+  id?: Maybe<Scalars['Float']['output']>;
+  parent_id?: Maybe<Scalars['Float']['output']>;
+};
+
+/** Boolean expression to filter rows from the table "scraper.child". All fields are combined with a logical 'AND'. */
+export type Scraper_Child_Bool_Exp = {
+  _and?: InputMaybe<Array<Scraper_Child_Bool_Exp>>;
+  _not?: InputMaybe<Scraper_Child_Bool_Exp>;
+  _or?: InputMaybe<Array<Scraper_Child_Bool_Exp>>;
+  id?: InputMaybe<Bigint_Comparison_Exp>;
+  name?: InputMaybe<String_Comparison_Exp>;
+  parent?: InputMaybe<Scraper_Parent_Bool_Exp>;
+  parent_id?: InputMaybe<Int_Comparison_Exp>;
+};
+
+/** unique or primary key constraints on table "scraper.child" */
+export enum Scraper_Child_Constraint {
+  /** unique or primary key constraint on columns "parent_id" */
+  ChildParentIdKey = 'child_parent_id_key',
+  /** unique or primary key constraint on columns "id" */
+  ChildPkey = 'child_pkey'
+}
+
+/** input type for incrementing numeric columns in table "scraper.child" */
+export type Scraper_Child_Inc_Input = {
+  id?: InputMaybe<Scalars['bigint']['input']>;
+  parent_id?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** input type for inserting data into table "scraper.child" */
+export type Scraper_Child_Insert_Input = {
+  id?: InputMaybe<Scalars['bigint']['input']>;
+  name?: InputMaybe<Scalars['String']['input']>;
+  parent?: InputMaybe<Scraper_Parent_Obj_Rel_Insert_Input>;
+  parent_id?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** aggregate max on columns */
+export type Scraper_Child_Max_Fields = {
+  __typename?: 'scraper_child_max_fields';
+  id?: Maybe<Scalars['bigint']['output']>;
+  name?: Maybe<Scalars['String']['output']>;
+  parent_id?: Maybe<Scalars['Int']['output']>;
+};
+
+/** aggregate min on columns */
+export type Scraper_Child_Min_Fields = {
+  __typename?: 'scraper_child_min_fields';
+  id?: Maybe<Scalars['bigint']['output']>;
+  name?: Maybe<Scalars['String']['output']>;
+  parent_id?: Maybe<Scalars['Int']['output']>;
+};
+
+/** response of any mutation on the table "scraper.child" */
+export type Scraper_Child_Mutation_Response = {
+  __typename?: 'scraper_child_mutation_response';
+  /** number of rows affected by the mutation */
+  affected_rows: Scalars['Int']['output'];
+  /** data from the rows affected by the mutation */
+  returning: Array<Scraper_Child>;
+};
+
+/** input type for inserting object relation for remote table "scraper.child" */
+export type Scraper_Child_Obj_Rel_Insert_Input = {
+  data: Scraper_Child_Insert_Input;
+  /** upsert condition */
+  on_conflict?: InputMaybe<Scraper_Child_On_Conflict>;
+};
+
+/** on_conflict condition type for table "scraper.child" */
+export type Scraper_Child_On_Conflict = {
+  constraint: Scraper_Child_Constraint;
+  update_columns?: Array<Scraper_Child_Update_Column>;
+  where?: InputMaybe<Scraper_Child_Bool_Exp>;
+};
+
+/** Ordering options when selecting data from "scraper.child". */
+export type Scraper_Child_Order_By = {
+  id?: InputMaybe<Order_By>;
+  name?: InputMaybe<Order_By>;
+  parent?: InputMaybe<Scraper_Parent_Order_By>;
+  parent_id?: InputMaybe<Order_By>;
+};
+
+/** primary key columns input for table: scraper.child */
+export type Scraper_Child_Pk_Columns_Input = {
+  id: Scalars['bigint']['input'];
+};
+
+/** select columns of table "scraper.child" */
+export enum Scraper_Child_Select_Column {
+  /** column name */
+  Id = 'id',
+  /** column name */
+  Name = 'name',
+  /** column name */
+  ParentId = 'parent_id'
+}
+
+/** input type for updating data in table "scraper.child" */
+export type Scraper_Child_Set_Input = {
+  id?: InputMaybe<Scalars['bigint']['input']>;
+  name?: InputMaybe<Scalars['String']['input']>;
+  parent_id?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** aggregate stddev on columns */
+export type Scraper_Child_Stddev_Fields = {
+  __typename?: 'scraper_child_stddev_fields';
+  id?: Maybe<Scalars['Float']['output']>;
+  parent_id?: Maybe<Scalars['Float']['output']>;
+};
+
+/** aggregate stddev_pop on columns */
+export type Scraper_Child_Stddev_Pop_Fields = {
+  __typename?: 'scraper_child_stddev_pop_fields';
+  id?: Maybe<Scalars['Float']['output']>;
+  parent_id?: Maybe<Scalars['Float']['output']>;
+};
+
+/** aggregate stddev_samp on columns */
+export type Scraper_Child_Stddev_Samp_Fields = {
+  __typename?: 'scraper_child_stddev_samp_fields';
+  id?: Maybe<Scalars['Float']['output']>;
+  parent_id?: Maybe<Scalars['Float']['output']>;
+};
+
+/** Streaming cursor of the table "scraper_child" */
+export type Scraper_Child_Stream_Cursor_Input = {
+  /** Stream column input with initial value */
+  initial_value: Scraper_Child_Stream_Cursor_Value_Input;
+  /** cursor ordering */
+  ordering?: InputMaybe<Cursor_Ordering>;
+};
+
+/** Initial value of the column from where the streaming should start */
+export type Scraper_Child_Stream_Cursor_Value_Input = {
+  id?: InputMaybe<Scalars['bigint']['input']>;
+  name?: InputMaybe<Scalars['String']['input']>;
+  parent_id?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** aggregate sum on columns */
+export type Scraper_Child_Sum_Fields = {
+  __typename?: 'scraper_child_sum_fields';
+  id?: Maybe<Scalars['bigint']['output']>;
+  parent_id?: Maybe<Scalars['Int']['output']>;
+};
+
+/** update columns of table "scraper.child" */
+export enum Scraper_Child_Update_Column {
+  /** column name */
+  Id = 'id',
+  /** column name */
+  Name = 'name',
+  /** column name */
+  ParentId = 'parent_id'
+}
+
+export type Scraper_Child_Updates = {
+  /** increments the numeric columns with given value of the filtered values */
+  _inc?: InputMaybe<Scraper_Child_Inc_Input>;
+  /** sets the columns of the filtered rows to the given values */
+  _set?: InputMaybe<Scraper_Child_Set_Input>;
+  /** filter the rows which have to be updated */
+  where: Scraper_Child_Bool_Exp;
+};
+
+/** aggregate var_pop on columns */
+export type Scraper_Child_Var_Pop_Fields = {
+  __typename?: 'scraper_child_var_pop_fields';
+  id?: Maybe<Scalars['Float']['output']>;
+  parent_id?: Maybe<Scalars['Float']['output']>;
+};
+
+/** aggregate var_samp on columns */
+export type Scraper_Child_Var_Samp_Fields = {
+  __typename?: 'scraper_child_var_samp_fields';
+  id?: Maybe<Scalars['Float']['output']>;
+  parent_id?: Maybe<Scalars['Float']['output']>;
+};
+
+/** aggregate variance on columns */
+export type Scraper_Child_Variance_Fields = {
+  __typename?: 'scraper_child_variance_fields';
+  id?: Maybe<Scalars['Float']['output']>;
+  parent_id?: Maybe<Scalars['Float']['output']>;
 };
 
 /** The shallow scraped data before visiting detail page. */
@@ -9736,6 +10310,259 @@ export type Scraper_Item_Variance_Fields = {
   platform_id?: Maybe<Scalars['Float']['output']>;
 };
 
+/** columns and relationships of "scraper.parent" */
+export type Scraper_Parent = {
+  __typename?: 'scraper_parent';
+  /** An object relationship */
+  child?: Maybe<Scraper_Child>;
+  group_id?: Maybe<Scalars['Int']['output']>;
+  id: Scalars['bigint']['output'];
+  name: Scalars['String']['output'];
+  platform_id?: Maybe<Scalars['Int']['output']>;
+};
+
+/** aggregated selection of "scraper.parent" */
+export type Scraper_Parent_Aggregate = {
+  __typename?: 'scraper_parent_aggregate';
+  aggregate?: Maybe<Scraper_Parent_Aggregate_Fields>;
+  nodes: Array<Scraper_Parent>;
+};
+
+/** aggregate fields of "scraper.parent" */
+export type Scraper_Parent_Aggregate_Fields = {
+  __typename?: 'scraper_parent_aggregate_fields';
+  avg?: Maybe<Scraper_Parent_Avg_Fields>;
+  count: Scalars['Int']['output'];
+  max?: Maybe<Scraper_Parent_Max_Fields>;
+  min?: Maybe<Scraper_Parent_Min_Fields>;
+  stddev?: Maybe<Scraper_Parent_Stddev_Fields>;
+  stddev_pop?: Maybe<Scraper_Parent_Stddev_Pop_Fields>;
+  stddev_samp?: Maybe<Scraper_Parent_Stddev_Samp_Fields>;
+  sum?: Maybe<Scraper_Parent_Sum_Fields>;
+  var_pop?: Maybe<Scraper_Parent_Var_Pop_Fields>;
+  var_samp?: Maybe<Scraper_Parent_Var_Samp_Fields>;
+  variance?: Maybe<Scraper_Parent_Variance_Fields>;
+};
+
+
+/** aggregate fields of "scraper.parent" */
+export type Scraper_Parent_Aggregate_FieldsCountArgs = {
+  columns?: InputMaybe<Array<Scraper_Parent_Select_Column>>;
+  distinct?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+/** aggregate avg on columns */
+export type Scraper_Parent_Avg_Fields = {
+  __typename?: 'scraper_parent_avg_fields';
+  group_id?: Maybe<Scalars['Float']['output']>;
+  id?: Maybe<Scalars['Float']['output']>;
+  platform_id?: Maybe<Scalars['Float']['output']>;
+};
+
+/** Boolean expression to filter rows from the table "scraper.parent". All fields are combined with a logical 'AND'. */
+export type Scraper_Parent_Bool_Exp = {
+  _and?: InputMaybe<Array<Scraper_Parent_Bool_Exp>>;
+  _not?: InputMaybe<Scraper_Parent_Bool_Exp>;
+  _or?: InputMaybe<Array<Scraper_Parent_Bool_Exp>>;
+  child?: InputMaybe<Scraper_Child_Bool_Exp>;
+  group_id?: InputMaybe<Int_Comparison_Exp>;
+  id?: InputMaybe<Bigint_Comparison_Exp>;
+  name?: InputMaybe<String_Comparison_Exp>;
+  platform_id?: InputMaybe<Int_Comparison_Exp>;
+};
+
+/** unique or primary key constraints on table "scraper.parent" */
+export enum Scraper_Parent_Constraint {
+  /** unique or primary key constraint on columns "platform_id", "group_id" */
+  ParentGroupIdPlatformIdKey = 'parent_group_id_platform_id_key',
+  /** unique or primary key constraint on columns "id" */
+  ParentPkey = 'parent_pkey'
+}
+
+/** input type for incrementing numeric columns in table "scraper.parent" */
+export type Scraper_Parent_Inc_Input = {
+  group_id?: InputMaybe<Scalars['Int']['input']>;
+  id?: InputMaybe<Scalars['bigint']['input']>;
+  platform_id?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** input type for inserting data into table "scraper.parent" */
+export type Scraper_Parent_Insert_Input = {
+  child?: InputMaybe<Scraper_Child_Obj_Rel_Insert_Input>;
+  group_id?: InputMaybe<Scalars['Int']['input']>;
+  id?: InputMaybe<Scalars['bigint']['input']>;
+  name?: InputMaybe<Scalars['String']['input']>;
+  platform_id?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** aggregate max on columns */
+export type Scraper_Parent_Max_Fields = {
+  __typename?: 'scraper_parent_max_fields';
+  group_id?: Maybe<Scalars['Int']['output']>;
+  id?: Maybe<Scalars['bigint']['output']>;
+  name?: Maybe<Scalars['String']['output']>;
+  platform_id?: Maybe<Scalars['Int']['output']>;
+};
+
+/** aggregate min on columns */
+export type Scraper_Parent_Min_Fields = {
+  __typename?: 'scraper_parent_min_fields';
+  group_id?: Maybe<Scalars['Int']['output']>;
+  id?: Maybe<Scalars['bigint']['output']>;
+  name?: Maybe<Scalars['String']['output']>;
+  platform_id?: Maybe<Scalars['Int']['output']>;
+};
+
+/** response of any mutation on the table "scraper.parent" */
+export type Scraper_Parent_Mutation_Response = {
+  __typename?: 'scraper_parent_mutation_response';
+  /** number of rows affected by the mutation */
+  affected_rows: Scalars['Int']['output'];
+  /** data from the rows affected by the mutation */
+  returning: Array<Scraper_Parent>;
+};
+
+/** input type for inserting object relation for remote table "scraper.parent" */
+export type Scraper_Parent_Obj_Rel_Insert_Input = {
+  data: Scraper_Parent_Insert_Input;
+  /** upsert condition */
+  on_conflict?: InputMaybe<Scraper_Parent_On_Conflict>;
+};
+
+/** on_conflict condition type for table "scraper.parent" */
+export type Scraper_Parent_On_Conflict = {
+  constraint: Scraper_Parent_Constraint;
+  update_columns?: Array<Scraper_Parent_Update_Column>;
+  where?: InputMaybe<Scraper_Parent_Bool_Exp>;
+};
+
+/** Ordering options when selecting data from "scraper.parent". */
+export type Scraper_Parent_Order_By = {
+  child?: InputMaybe<Scraper_Child_Order_By>;
+  group_id?: InputMaybe<Order_By>;
+  id?: InputMaybe<Order_By>;
+  name?: InputMaybe<Order_By>;
+  platform_id?: InputMaybe<Order_By>;
+};
+
+/** primary key columns input for table: scraper.parent */
+export type Scraper_Parent_Pk_Columns_Input = {
+  id: Scalars['bigint']['input'];
+};
+
+/** select columns of table "scraper.parent" */
+export enum Scraper_Parent_Select_Column {
+  /** column name */
+  GroupId = 'group_id',
+  /** column name */
+  Id = 'id',
+  /** column name */
+  Name = 'name',
+  /** column name */
+  PlatformId = 'platform_id'
+}
+
+/** input type for updating data in table "scraper.parent" */
+export type Scraper_Parent_Set_Input = {
+  group_id?: InputMaybe<Scalars['Int']['input']>;
+  id?: InputMaybe<Scalars['bigint']['input']>;
+  name?: InputMaybe<Scalars['String']['input']>;
+  platform_id?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** aggregate stddev on columns */
+export type Scraper_Parent_Stddev_Fields = {
+  __typename?: 'scraper_parent_stddev_fields';
+  group_id?: Maybe<Scalars['Float']['output']>;
+  id?: Maybe<Scalars['Float']['output']>;
+  platform_id?: Maybe<Scalars['Float']['output']>;
+};
+
+/** aggregate stddev_pop on columns */
+export type Scraper_Parent_Stddev_Pop_Fields = {
+  __typename?: 'scraper_parent_stddev_pop_fields';
+  group_id?: Maybe<Scalars['Float']['output']>;
+  id?: Maybe<Scalars['Float']['output']>;
+  platform_id?: Maybe<Scalars['Float']['output']>;
+};
+
+/** aggregate stddev_samp on columns */
+export type Scraper_Parent_Stddev_Samp_Fields = {
+  __typename?: 'scraper_parent_stddev_samp_fields';
+  group_id?: Maybe<Scalars['Float']['output']>;
+  id?: Maybe<Scalars['Float']['output']>;
+  platform_id?: Maybe<Scalars['Float']['output']>;
+};
+
+/** Streaming cursor of the table "scraper_parent" */
+export type Scraper_Parent_Stream_Cursor_Input = {
+  /** Stream column input with initial value */
+  initial_value: Scraper_Parent_Stream_Cursor_Value_Input;
+  /** cursor ordering */
+  ordering?: InputMaybe<Cursor_Ordering>;
+};
+
+/** Initial value of the column from where the streaming should start */
+export type Scraper_Parent_Stream_Cursor_Value_Input = {
+  group_id?: InputMaybe<Scalars['Int']['input']>;
+  id?: InputMaybe<Scalars['bigint']['input']>;
+  name?: InputMaybe<Scalars['String']['input']>;
+  platform_id?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** aggregate sum on columns */
+export type Scraper_Parent_Sum_Fields = {
+  __typename?: 'scraper_parent_sum_fields';
+  group_id?: Maybe<Scalars['Int']['output']>;
+  id?: Maybe<Scalars['bigint']['output']>;
+  platform_id?: Maybe<Scalars['Int']['output']>;
+};
+
+/** update columns of table "scraper.parent" */
+export enum Scraper_Parent_Update_Column {
+  /** column name */
+  GroupId = 'group_id',
+  /** column name */
+  Id = 'id',
+  /** column name */
+  Name = 'name',
+  /** column name */
+  PlatformId = 'platform_id'
+}
+
+export type Scraper_Parent_Updates = {
+  /** increments the numeric columns with given value of the filtered values */
+  _inc?: InputMaybe<Scraper_Parent_Inc_Input>;
+  /** sets the columns of the filtered rows to the given values */
+  _set?: InputMaybe<Scraper_Parent_Set_Input>;
+  /** filter the rows which have to be updated */
+  where: Scraper_Parent_Bool_Exp;
+};
+
+/** aggregate var_pop on columns */
+export type Scraper_Parent_Var_Pop_Fields = {
+  __typename?: 'scraper_parent_var_pop_fields';
+  group_id?: Maybe<Scalars['Float']['output']>;
+  id?: Maybe<Scalars['Float']['output']>;
+  platform_id?: Maybe<Scalars['Float']['output']>;
+};
+
+/** aggregate var_samp on columns */
+export type Scraper_Parent_Var_Samp_Fields = {
+  __typename?: 'scraper_parent_var_samp_fields';
+  group_id?: Maybe<Scalars['Float']['output']>;
+  id?: Maybe<Scalars['Float']['output']>;
+  platform_id?: Maybe<Scalars['Float']['output']>;
+};
+
+/** aggregate variance on columns */
+export type Scraper_Parent_Variance_Fields = {
+  __typename?: 'scraper_parent_variance_fields';
+  group_id?: Maybe<Scalars['Float']['output']>;
+  id?: Maybe<Scalars['Float']['output']>;
+  platform_id?: Maybe<Scalars['Float']['output']>;
+};
+
 /** columns and relationships of "scraper.run" */
 export type Scraper_Run = {
   __typename?: 'scraper_run';
@@ -10051,6 +10878,356 @@ export type Scraper_Run_Updates = {
   _set?: InputMaybe<Scraper_Run_Set_Input>;
   /** filter the rows which have to be updated */
   where: Scraper_Run_Bool_Exp;
+};
+
+/** columns and relationships of "scraper.run_v2" */
+export type Scraper_Run_V2 = {
+  __typename?: 'scraper_run_v2';
+  category_id?: Maybe<Scalars['Int']['output']>;
+  created_at: Scalars['timestamptz']['output'];
+  creator?: Maybe<Scalars['String']['output']>;
+  id: Scalars['Int']['output'];
+  item_ids?: Maybe<Array<Scalars['Int']['output']>>;
+  keywords?: Maybe<Scalars['String']['output']>;
+  platform?: Maybe<Scalars['String']['output']>;
+  result_ids?: Maybe<Array<Scalars['Int']['output']>>;
+  run_id: Scalars['String']['output'];
+  status: Scalars['String']['output'];
+  type?: Maybe<Scalars['String']['output']>;
+  uk?: Maybe<Scalars['String']['output']>;
+  updated_at: Scalars['timestamptz']['output'];
+  url?: Maybe<Scalars['String']['output']>;
+};
+
+/** aggregated selection of "scraper.run_v2" */
+export type Scraper_Run_V2_Aggregate = {
+  __typename?: 'scraper_run_v2_aggregate';
+  aggregate?: Maybe<Scraper_Run_V2_Aggregate_Fields>;
+  nodes: Array<Scraper_Run_V2>;
+};
+
+/** aggregate fields of "scraper.run_v2" */
+export type Scraper_Run_V2_Aggregate_Fields = {
+  __typename?: 'scraper_run_v2_aggregate_fields';
+  avg?: Maybe<Scraper_Run_V2_Avg_Fields>;
+  count: Scalars['Int']['output'];
+  max?: Maybe<Scraper_Run_V2_Max_Fields>;
+  min?: Maybe<Scraper_Run_V2_Min_Fields>;
+  stddev?: Maybe<Scraper_Run_V2_Stddev_Fields>;
+  stddev_pop?: Maybe<Scraper_Run_V2_Stddev_Pop_Fields>;
+  stddev_samp?: Maybe<Scraper_Run_V2_Stddev_Samp_Fields>;
+  sum?: Maybe<Scraper_Run_V2_Sum_Fields>;
+  var_pop?: Maybe<Scraper_Run_V2_Var_Pop_Fields>;
+  var_samp?: Maybe<Scraper_Run_V2_Var_Samp_Fields>;
+  variance?: Maybe<Scraper_Run_V2_Variance_Fields>;
+};
+
+
+/** aggregate fields of "scraper.run_v2" */
+export type Scraper_Run_V2_Aggregate_FieldsCountArgs = {
+  columns?: InputMaybe<Array<Scraper_Run_V2_Select_Column>>;
+  distinct?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+/** aggregate avg on columns */
+export type Scraper_Run_V2_Avg_Fields = {
+  __typename?: 'scraper_run_v2_avg_fields';
+  category_id?: Maybe<Scalars['Float']['output']>;
+  id?: Maybe<Scalars['Float']['output']>;
+};
+
+/** Boolean expression to filter rows from the table "scraper.run_v2". All fields are combined with a logical 'AND'. */
+export type Scraper_Run_V2_Bool_Exp = {
+  _and?: InputMaybe<Array<Scraper_Run_V2_Bool_Exp>>;
+  _not?: InputMaybe<Scraper_Run_V2_Bool_Exp>;
+  _or?: InputMaybe<Array<Scraper_Run_V2_Bool_Exp>>;
+  category_id?: InputMaybe<Int_Comparison_Exp>;
+  created_at?: InputMaybe<Timestamptz_Comparison_Exp>;
+  creator?: InputMaybe<String_Comparison_Exp>;
+  id?: InputMaybe<Int_Comparison_Exp>;
+  item_ids?: InputMaybe<Int_Array_Comparison_Exp>;
+  keywords?: InputMaybe<String_Comparison_Exp>;
+  platform?: InputMaybe<String_Comparison_Exp>;
+  result_ids?: InputMaybe<Int_Array_Comparison_Exp>;
+  run_id?: InputMaybe<String_Comparison_Exp>;
+  status?: InputMaybe<String_Comparison_Exp>;
+  type?: InputMaybe<String_Comparison_Exp>;
+  uk?: InputMaybe<String_Comparison_Exp>;
+  updated_at?: InputMaybe<Timestamptz_Comparison_Exp>;
+  url?: InputMaybe<String_Comparison_Exp>;
+};
+
+/** unique or primary key constraints on table "scraper.run_v2" */
+export enum Scraper_Run_V2_Constraint {
+  /** unique or primary key constraint on columns "id" */
+  RunV2Pkey = 'run_v2_pkey'
+}
+
+/** input type for incrementing numeric columns in table "scraper.run_v2" */
+export type Scraper_Run_V2_Inc_Input = {
+  category_id?: InputMaybe<Scalars['Int']['input']>;
+  id?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** input type for inserting data into table "scraper.run_v2" */
+export type Scraper_Run_V2_Insert_Input = {
+  category_id?: InputMaybe<Scalars['Int']['input']>;
+  created_at?: InputMaybe<Scalars['timestamptz']['input']>;
+  creator?: InputMaybe<Scalars['String']['input']>;
+  id?: InputMaybe<Scalars['Int']['input']>;
+  item_ids?: InputMaybe<Array<Scalars['Int']['input']>>;
+  keywords?: InputMaybe<Scalars['String']['input']>;
+  platform?: InputMaybe<Scalars['String']['input']>;
+  result_ids?: InputMaybe<Array<Scalars['Int']['input']>>;
+  run_id?: InputMaybe<Scalars['String']['input']>;
+  status?: InputMaybe<Scalars['String']['input']>;
+  type?: InputMaybe<Scalars['String']['input']>;
+  uk?: InputMaybe<Scalars['String']['input']>;
+  updated_at?: InputMaybe<Scalars['timestamptz']['input']>;
+  url?: InputMaybe<Scalars['String']['input']>;
+};
+
+/** aggregate max on columns */
+export type Scraper_Run_V2_Max_Fields = {
+  __typename?: 'scraper_run_v2_max_fields';
+  category_id?: Maybe<Scalars['Int']['output']>;
+  created_at?: Maybe<Scalars['timestamptz']['output']>;
+  creator?: Maybe<Scalars['String']['output']>;
+  id?: Maybe<Scalars['Int']['output']>;
+  item_ids?: Maybe<Array<Scalars['Int']['output']>>;
+  keywords?: Maybe<Scalars['String']['output']>;
+  platform?: Maybe<Scalars['String']['output']>;
+  result_ids?: Maybe<Array<Scalars['Int']['output']>>;
+  run_id?: Maybe<Scalars['String']['output']>;
+  status?: Maybe<Scalars['String']['output']>;
+  type?: Maybe<Scalars['String']['output']>;
+  uk?: Maybe<Scalars['String']['output']>;
+  updated_at?: Maybe<Scalars['timestamptz']['output']>;
+  url?: Maybe<Scalars['String']['output']>;
+};
+
+/** aggregate min on columns */
+export type Scraper_Run_V2_Min_Fields = {
+  __typename?: 'scraper_run_v2_min_fields';
+  category_id?: Maybe<Scalars['Int']['output']>;
+  created_at?: Maybe<Scalars['timestamptz']['output']>;
+  creator?: Maybe<Scalars['String']['output']>;
+  id?: Maybe<Scalars['Int']['output']>;
+  item_ids?: Maybe<Array<Scalars['Int']['output']>>;
+  keywords?: Maybe<Scalars['String']['output']>;
+  platform?: Maybe<Scalars['String']['output']>;
+  result_ids?: Maybe<Array<Scalars['Int']['output']>>;
+  run_id?: Maybe<Scalars['String']['output']>;
+  status?: Maybe<Scalars['String']['output']>;
+  type?: Maybe<Scalars['String']['output']>;
+  uk?: Maybe<Scalars['String']['output']>;
+  updated_at?: Maybe<Scalars['timestamptz']['output']>;
+  url?: Maybe<Scalars['String']['output']>;
+};
+
+/** response of any mutation on the table "scraper.run_v2" */
+export type Scraper_Run_V2_Mutation_Response = {
+  __typename?: 'scraper_run_v2_mutation_response';
+  /** number of rows affected by the mutation */
+  affected_rows: Scalars['Int']['output'];
+  /** data from the rows affected by the mutation */
+  returning: Array<Scraper_Run_V2>;
+};
+
+/** on_conflict condition type for table "scraper.run_v2" */
+export type Scraper_Run_V2_On_Conflict = {
+  constraint: Scraper_Run_V2_Constraint;
+  update_columns?: Array<Scraper_Run_V2_Update_Column>;
+  where?: InputMaybe<Scraper_Run_V2_Bool_Exp>;
+};
+
+/** Ordering options when selecting data from "scraper.run_v2". */
+export type Scraper_Run_V2_Order_By = {
+  category_id?: InputMaybe<Order_By>;
+  created_at?: InputMaybe<Order_By>;
+  creator?: InputMaybe<Order_By>;
+  id?: InputMaybe<Order_By>;
+  item_ids?: InputMaybe<Order_By>;
+  keywords?: InputMaybe<Order_By>;
+  platform?: InputMaybe<Order_By>;
+  result_ids?: InputMaybe<Order_By>;
+  run_id?: InputMaybe<Order_By>;
+  status?: InputMaybe<Order_By>;
+  type?: InputMaybe<Order_By>;
+  uk?: InputMaybe<Order_By>;
+  updated_at?: InputMaybe<Order_By>;
+  url?: InputMaybe<Order_By>;
+};
+
+/** primary key columns input for table: scraper.run_v2 */
+export type Scraper_Run_V2_Pk_Columns_Input = {
+  id: Scalars['Int']['input'];
+};
+
+/** select columns of table "scraper.run_v2" */
+export enum Scraper_Run_V2_Select_Column {
+  /** column name */
+  CategoryId = 'category_id',
+  /** column name */
+  CreatedAt = 'created_at',
+  /** column name */
+  Creator = 'creator',
+  /** column name */
+  Id = 'id',
+  /** column name */
+  ItemIds = 'item_ids',
+  /** column name */
+  Keywords = 'keywords',
+  /** column name */
+  Platform = 'platform',
+  /** column name */
+  ResultIds = 'result_ids',
+  /** column name */
+  RunId = 'run_id',
+  /** column name */
+  Status = 'status',
+  /** column name */
+  Type = 'type',
+  /** column name */
+  Uk = 'uk',
+  /** column name */
+  UpdatedAt = 'updated_at',
+  /** column name */
+  Url = 'url'
+}
+
+/** input type for updating data in table "scraper.run_v2" */
+export type Scraper_Run_V2_Set_Input = {
+  category_id?: InputMaybe<Scalars['Int']['input']>;
+  created_at?: InputMaybe<Scalars['timestamptz']['input']>;
+  creator?: InputMaybe<Scalars['String']['input']>;
+  id?: InputMaybe<Scalars['Int']['input']>;
+  item_ids?: InputMaybe<Array<Scalars['Int']['input']>>;
+  keywords?: InputMaybe<Scalars['String']['input']>;
+  platform?: InputMaybe<Scalars['String']['input']>;
+  result_ids?: InputMaybe<Array<Scalars['Int']['input']>>;
+  run_id?: InputMaybe<Scalars['String']['input']>;
+  status?: InputMaybe<Scalars['String']['input']>;
+  type?: InputMaybe<Scalars['String']['input']>;
+  uk?: InputMaybe<Scalars['String']['input']>;
+  updated_at?: InputMaybe<Scalars['timestamptz']['input']>;
+  url?: InputMaybe<Scalars['String']['input']>;
+};
+
+/** aggregate stddev on columns */
+export type Scraper_Run_V2_Stddev_Fields = {
+  __typename?: 'scraper_run_v2_stddev_fields';
+  category_id?: Maybe<Scalars['Float']['output']>;
+  id?: Maybe<Scalars['Float']['output']>;
+};
+
+/** aggregate stddev_pop on columns */
+export type Scraper_Run_V2_Stddev_Pop_Fields = {
+  __typename?: 'scraper_run_v2_stddev_pop_fields';
+  category_id?: Maybe<Scalars['Float']['output']>;
+  id?: Maybe<Scalars['Float']['output']>;
+};
+
+/** aggregate stddev_samp on columns */
+export type Scraper_Run_V2_Stddev_Samp_Fields = {
+  __typename?: 'scraper_run_v2_stddev_samp_fields';
+  category_id?: Maybe<Scalars['Float']['output']>;
+  id?: Maybe<Scalars['Float']['output']>;
+};
+
+/** Streaming cursor of the table "scraper_run_v2" */
+export type Scraper_Run_V2_Stream_Cursor_Input = {
+  /** Stream column input with initial value */
+  initial_value: Scraper_Run_V2_Stream_Cursor_Value_Input;
+  /** cursor ordering */
+  ordering?: InputMaybe<Cursor_Ordering>;
+};
+
+/** Initial value of the column from where the streaming should start */
+export type Scraper_Run_V2_Stream_Cursor_Value_Input = {
+  category_id?: InputMaybe<Scalars['Int']['input']>;
+  created_at?: InputMaybe<Scalars['timestamptz']['input']>;
+  creator?: InputMaybe<Scalars['String']['input']>;
+  id?: InputMaybe<Scalars['Int']['input']>;
+  item_ids?: InputMaybe<Array<Scalars['Int']['input']>>;
+  keywords?: InputMaybe<Scalars['String']['input']>;
+  platform?: InputMaybe<Scalars['String']['input']>;
+  result_ids?: InputMaybe<Array<Scalars['Int']['input']>>;
+  run_id?: InputMaybe<Scalars['String']['input']>;
+  status?: InputMaybe<Scalars['String']['input']>;
+  type?: InputMaybe<Scalars['String']['input']>;
+  uk?: InputMaybe<Scalars['String']['input']>;
+  updated_at?: InputMaybe<Scalars['timestamptz']['input']>;
+  url?: InputMaybe<Scalars['String']['input']>;
+};
+
+/** aggregate sum on columns */
+export type Scraper_Run_V2_Sum_Fields = {
+  __typename?: 'scraper_run_v2_sum_fields';
+  category_id?: Maybe<Scalars['Int']['output']>;
+  id?: Maybe<Scalars['Int']['output']>;
+};
+
+/** update columns of table "scraper.run_v2" */
+export enum Scraper_Run_V2_Update_Column {
+  /** column name */
+  CategoryId = 'category_id',
+  /** column name */
+  CreatedAt = 'created_at',
+  /** column name */
+  Creator = 'creator',
+  /** column name */
+  Id = 'id',
+  /** column name */
+  ItemIds = 'item_ids',
+  /** column name */
+  Keywords = 'keywords',
+  /** column name */
+  Platform = 'platform',
+  /** column name */
+  ResultIds = 'result_ids',
+  /** column name */
+  RunId = 'run_id',
+  /** column name */
+  Status = 'status',
+  /** column name */
+  Type = 'type',
+  /** column name */
+  Uk = 'uk',
+  /** column name */
+  UpdatedAt = 'updated_at',
+  /** column name */
+  Url = 'url'
+}
+
+export type Scraper_Run_V2_Updates = {
+  /** increments the numeric columns with given value of the filtered values */
+  _inc?: InputMaybe<Scraper_Run_V2_Inc_Input>;
+  /** sets the columns of the filtered rows to the given values */
+  _set?: InputMaybe<Scraper_Run_V2_Set_Input>;
+  /** filter the rows which have to be updated */
+  where: Scraper_Run_V2_Bool_Exp;
+};
+
+/** aggregate var_pop on columns */
+export type Scraper_Run_V2_Var_Pop_Fields = {
+  __typename?: 'scraper_run_v2_var_pop_fields';
+  category_id?: Maybe<Scalars['Float']['output']>;
+  id?: Maybe<Scalars['Float']['output']>;
+};
+
+/** aggregate var_samp on columns */
+export type Scraper_Run_V2_Var_Samp_Fields = {
+  __typename?: 'scraper_run_v2_var_samp_fields';
+  category_id?: Maybe<Scalars['Float']['output']>;
+  id?: Maybe<Scalars['Float']['output']>;
+};
+
+/** aggregate variance on columns */
+export type Scraper_Run_V2_Variance_Fields = {
+  __typename?: 'scraper_run_v2_variance_fields';
+  category_id?: Maybe<Scalars['Float']['output']>;
+  id?: Maybe<Scalars['Float']['output']>;
 };
 
 /** aggregate var_pop on columns */
@@ -10582,6 +11759,14 @@ export type Subscription_Root = {
   nanisore_user_by_pk?: Maybe<Nanisore_User>;
   /** fetch data from the table in a streaming manner: "nanisore.user" */
   nanisore_user_stream: Array<Nanisore_User>;
+  /** fetch data from the table: "scraper.child" */
+  scraper_child: Array<Scraper_Child>;
+  /** fetch aggregated fields from the table: "scraper.child" */
+  scraper_child_aggregate: Scraper_Child_Aggregate;
+  /** fetch data from the table: "scraper.child" using primary key columns */
+  scraper_child_by_pk?: Maybe<Scraper_Child>;
+  /** fetch data from the table in a streaming manner: "scraper.child" */
+  scraper_child_stream: Array<Scraper_Child>;
   /** fetch data from the table: "scraper.item" */
   scraper_item: Array<Scraper_Item>;
   /** fetch aggregated fields from the table: "scraper.item" */
@@ -10590,6 +11775,14 @@ export type Subscription_Root = {
   scraper_item_by_pk?: Maybe<Scraper_Item>;
   /** fetch data from the table in a streaming manner: "scraper.item" */
   scraper_item_stream: Array<Scraper_Item>;
+  /** fetch data from the table: "scraper.parent" */
+  scraper_parent: Array<Scraper_Parent>;
+  /** fetch aggregated fields from the table: "scraper.parent" */
+  scraper_parent_aggregate: Scraper_Parent_Aggregate;
+  /** fetch data from the table: "scraper.parent" using primary key columns */
+  scraper_parent_by_pk?: Maybe<Scraper_Parent>;
+  /** fetch data from the table in a streaming manner: "scraper.parent" */
+  scraper_parent_stream: Array<Scraper_Parent>;
   /** fetch data from the table: "scraper.run" */
   scraper_run: Array<Scraper_Run>;
   /** fetch aggregated fields from the table: "scraper.run" */
@@ -10598,6 +11791,14 @@ export type Subscription_Root = {
   scraper_run_by_pk?: Maybe<Scraper_Run>;
   /** fetch data from the table in a streaming manner: "scraper.run" */
   scraper_run_stream: Array<Scraper_Run>;
+  /** fetch data from the table: "scraper.run_v2" */
+  scraper_run_v2: Array<Scraper_Run_V2>;
+  /** fetch aggregated fields from the table: "scraper.run_v2" */
+  scraper_run_v2_aggregate: Scraper_Run_V2_Aggregate;
+  /** fetch data from the table: "scraper.run_v2" using primary key columns */
+  scraper_run_v2_by_pk?: Maybe<Scraper_Run_V2>;
+  /** fetch data from the table in a streaming manner: "scraper.run_v2" */
+  scraper_run_v2_stream: Array<Scraper_Run_V2>;
   /** fetch data from the table: "scraper.scrape_later" */
   scraper_scrape_later: Array<Scraper_Scrape_Later>;
   /** fetch aggregated fields from the table: "scraper.scrape_later" */
@@ -11239,6 +12440,36 @@ export type Subscription_RootNanisore_User_StreamArgs = {
 };
 
 
+export type Subscription_RootScraper_ChildArgs = {
+  distinct_on?: InputMaybe<Array<Scraper_Child_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  offset?: InputMaybe<Scalars['Int']['input']>;
+  order_by?: InputMaybe<Array<Scraper_Child_Order_By>>;
+  where?: InputMaybe<Scraper_Child_Bool_Exp>;
+};
+
+
+export type Subscription_RootScraper_Child_AggregateArgs = {
+  distinct_on?: InputMaybe<Array<Scraper_Child_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  offset?: InputMaybe<Scalars['Int']['input']>;
+  order_by?: InputMaybe<Array<Scraper_Child_Order_By>>;
+  where?: InputMaybe<Scraper_Child_Bool_Exp>;
+};
+
+
+export type Subscription_RootScraper_Child_By_PkArgs = {
+  id: Scalars['bigint']['input'];
+};
+
+
+export type Subscription_RootScraper_Child_StreamArgs = {
+  batch_size: Scalars['Int']['input'];
+  cursor: Array<InputMaybe<Scraper_Child_Stream_Cursor_Input>>;
+  where?: InputMaybe<Scraper_Child_Bool_Exp>;
+};
+
+
 export type Subscription_RootScraper_ItemArgs = {
   distinct_on?: InputMaybe<Array<Scraper_Item_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']['input']>;
@@ -11269,6 +12500,36 @@ export type Subscription_RootScraper_Item_StreamArgs = {
 };
 
 
+export type Subscription_RootScraper_ParentArgs = {
+  distinct_on?: InputMaybe<Array<Scraper_Parent_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  offset?: InputMaybe<Scalars['Int']['input']>;
+  order_by?: InputMaybe<Array<Scraper_Parent_Order_By>>;
+  where?: InputMaybe<Scraper_Parent_Bool_Exp>;
+};
+
+
+export type Subscription_RootScraper_Parent_AggregateArgs = {
+  distinct_on?: InputMaybe<Array<Scraper_Parent_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  offset?: InputMaybe<Scalars['Int']['input']>;
+  order_by?: InputMaybe<Array<Scraper_Parent_Order_By>>;
+  where?: InputMaybe<Scraper_Parent_Bool_Exp>;
+};
+
+
+export type Subscription_RootScraper_Parent_By_PkArgs = {
+  id: Scalars['bigint']['input'];
+};
+
+
+export type Subscription_RootScraper_Parent_StreamArgs = {
+  batch_size: Scalars['Int']['input'];
+  cursor: Array<InputMaybe<Scraper_Parent_Stream_Cursor_Input>>;
+  where?: InputMaybe<Scraper_Parent_Bool_Exp>;
+};
+
+
 export type Subscription_RootScraper_RunArgs = {
   distinct_on?: InputMaybe<Array<Scraper_Run_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']['input']>;
@@ -11296,6 +12557,36 @@ export type Subscription_RootScraper_Run_StreamArgs = {
   batch_size: Scalars['Int']['input'];
   cursor: Array<InputMaybe<Scraper_Run_Stream_Cursor_Input>>;
   where?: InputMaybe<Scraper_Run_Bool_Exp>;
+};
+
+
+export type Subscription_RootScraper_Run_V2Args = {
+  distinct_on?: InputMaybe<Array<Scraper_Run_V2_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  offset?: InputMaybe<Scalars['Int']['input']>;
+  order_by?: InputMaybe<Array<Scraper_Run_V2_Order_By>>;
+  where?: InputMaybe<Scraper_Run_V2_Bool_Exp>;
+};
+
+
+export type Subscription_RootScraper_Run_V2_AggregateArgs = {
+  distinct_on?: InputMaybe<Array<Scraper_Run_V2_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  offset?: InputMaybe<Scalars['Int']['input']>;
+  order_by?: InputMaybe<Array<Scraper_Run_V2_Order_By>>;
+  where?: InputMaybe<Scraper_Run_V2_Bool_Exp>;
+};
+
+
+export type Subscription_RootScraper_Run_V2_By_PkArgs = {
+  id: Scalars['Int']['input'];
+};
+
+
+export type Subscription_RootScraper_Run_V2_StreamArgs = {
+  batch_size: Scalars['Int']['input'];
+  cursor: Array<InputMaybe<Scraper_Run_V2_Stream_Cursor_Input>>;
+  where?: InputMaybe<Scraper_Run_V2_Bool_Exp>;
 };
 
 

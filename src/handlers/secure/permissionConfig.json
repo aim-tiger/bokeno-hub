@@ -12,6 +12,10 @@
     "permission": "none"
   },
   {
+    "path": "/inner_scrape",
+    "permission": "none"
+  },
+  {
     "path": "/payment/create_payment_intent",
     "permission": "create:payment_intent"
   },
