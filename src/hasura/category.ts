@@ -154,8 +154,6 @@ export const getCategories = async (platform_name: string) => {
   return cates;
 };
 export const getCategoryByPK = async (category_id: number) => {
-  console.log('getCategoryByPK',category_id);
-  
   const result = await execute(GET_CATEGORY_BY_PK, { id: category_id });
   const cate: Nanisore_Category = result.nanisore_category_by_pk;
   return cate;
