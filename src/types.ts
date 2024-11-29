@@ -21,10 +21,16 @@ export class NSAuthUser {
   }
 }
 
-export type ScrapeParam = {
+export type SpecificScrapeParam = {
   category_id: string;
   keyword?: string;
   type: string;
   item_ids?: string;
   user: NSAuthUser;
+};
+
+export type IntergratedScrapeParam = {
+  platform_id: string;
+  user: NSAuthUser;
+  type: string;
 };

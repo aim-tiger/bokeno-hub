@@ -13,7 +13,11 @@
   },
   {
     "path": "/inner_scrape",
-    "permission": "none"
+    "permission": "update:product"
+  },
+  {
+    "path": "/integrated_scrape",
+    "permission": "update:product"
   },
   {
     "path": "/payment/create_payment_intent",
